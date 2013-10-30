@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/dev/!svn/ver/56703/m-app/UPClientV3/iOS/trunk/UPClientV3/include/Lumberjack/Extensions
+END
+DispatchQueueLogFormatter.h
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/dev/!svn/ver/56703/m-app/UPClientV3/iOS/trunk/UPClientV3/include/Lumberjack/Extensions/DispatchQueueLogFormatter.h
+END
+ContextFilterLogFormatter.h
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/dev/!svn/ver/56703/m-app/UPClientV3/iOS/trunk/UPClientV3/include/Lumberjack/Extensions/ContextFilterLogFormatter.h
+END
+DispatchQueueLogFormatter.m
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/dev/!svn/ver/56703/m-app/UPClientV3/iOS/trunk/UPClientV3/include/Lumberjack/Extensions/DispatchQueueLogFormatter.m
+END
+ContextFilterLogFormatter.m
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/dev/!svn/ver/56703/m-app/UPClientV3/iOS/trunk/UPClientV3/include/Lumberjack/Extensions/ContextFilterLogFormatter.m
+END
