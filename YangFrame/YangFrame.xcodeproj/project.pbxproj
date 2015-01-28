@@ -16,6 +16,9 @@
 		2201B24B1A78DD730080E78F /* cus_actionSheet_otherBtn_h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2201B23F1A78DD730080E78F /* cus_actionSheet_otherBtn_h@2x.png */; };
 		2201B24C1A78DD730080E78F /* YJCustomActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 2201B2411A78DD730080E78F /* YJCustomActionSheet.m */; };
 		2201B24D1A78DD730080E78F /* YJAlignmentLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2201B2441A78DD730080E78F /* YJAlignmentLabel.m */; };
+		2201B2561A78E0500080E78F /* YJTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 2201B2511A78E0500080E78F /* YJTabBar.m */; };
+		2201B2571A78E0500080E78F /* YJTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2201B2531A78E0500080E78F /* YJTabBarController.m */; };
+		2201B2581A78E0500080E78F /* YJTabBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 2201B2551A78E0500080E78F /* YJTabBarItem.m */; };
 		AC79CA7F181BE84500DBE03E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC79CA7E181BE84500DBE03E /* Foundation.framework */; };
 		AC79CA81181BE84500DBE03E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC79CA80181BE84500DBE03E /* CoreGraphics.framework */; };
 		AC79CA83181BE84500DBE03E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC79CA82181BE84500DBE03E /* UIKit.framework */; };
@@ -107,6 +110,12 @@
 		2201B2411A78DD730080E78F /* YJCustomActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJCustomActionSheet.m; sourceTree = "<group>"; };
 		2201B2431A78DD730080E78F /* YJAlignmentLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJAlignmentLabel.h; sourceTree = "<group>"; };
 		2201B2441A78DD730080E78F /* YJAlignmentLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJAlignmentLabel.m; sourceTree = "<group>"; };
+		2201B2501A78E0500080E78F /* YJTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJTabBar.h; sourceTree = "<group>"; };
+		2201B2511A78E0500080E78F /* YJTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJTabBar.m; sourceTree = "<group>"; };
+		2201B2521A78E0500080E78F /* YJTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJTabBarController.h; sourceTree = "<group>"; };
+		2201B2531A78E0500080E78F /* YJTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJTabBarController.m; sourceTree = "<group>"; };
+		2201B2541A78E0500080E78F /* YJTabBarItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJTabBarItem.h; sourceTree = "<group>"; };
+		2201B2551A78E0500080E78F /* YJTabBarItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJTabBarItem.m; sourceTree = "<group>"; };
 		AC79CA7B181BE84500DBE03E /* YangFrame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YangFrame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC79CA7E181BE84500DBE03E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		AC79CA80181BE84500DBE03E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -312,6 +321,27 @@
 			path = AlignmentLabel;
 			sourceTree = "<group>";
 		};
+		2201B24E1A78E0500080E78F /* Mine */ = {
+			isa = PBXGroup;
+			children = (
+				2201B24F1A78E0500080E78F /* YJTabBarController */,
+			);
+			path = Mine;
+			sourceTree = "<group>";
+		};
+		2201B24F1A78E0500080E78F /* YJTabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				2201B2501A78E0500080E78F /* YJTabBar.h */,
+				2201B2511A78E0500080E78F /* YJTabBar.m */,
+				2201B2521A78E0500080E78F /* YJTabBarController.h */,
+				2201B2531A78E0500080E78F /* YJTabBarController.m */,
+				2201B2541A78E0500080E78F /* YJTabBarItem.h */,
+				2201B2551A78E0500080E78F /* YJTabBarItem.m */,
+			);
+			path = YJTabBarController;
+			sourceTree = "<group>";
+		};
 		AC79CA72181BE84500DBE03E = {
 			isa = PBXGroup;
 			children = (
@@ -355,6 +385,7 @@
 				AC79CA95181BE84500DBE03E /* Images.xcassets */,
 				AC79CA92181BE84500DBE03E /* YangFrame.xcdatamodeld */,
 				AC79CABA181BEE0300DBE03E /* Include */,
+				2201B24E1A78E0500080E78F /* Mine */,
 				AC79CAB3181BEE0300DBE03E /* Classes */,
 				AC79CAB9181BEE0300DBE03E /* Images */,
 				AC79CB06181BEE0300DBE03E /* Resources */,
@@ -817,6 +848,7 @@
 				AC79CB1C181BEE0300DBE03E /* NSDictionary+RequestEncoding.m in Sources */,
 				AC79CB10181BEE0300DBE03E /* JSONKeyMapper.m in Sources */,
 				AC79CB1D181BEE0300DBE03E /* NSString+MKNetworkKitAdditions.m in Sources */,
+				2201B2571A78E0500080E78F /* YJTabBarController.m in Sources */,
 				AC79CB1A181BEE0300DBE03E /* NSData+MKBase64.m in Sources */,
 				2201B24D1A78DD730080E78F /* YJAlignmentLabel.m in Sources */,
 				AC7D2B66181E9B78004AD9F7 /* SFHFKeychainUtils.m in Sources */,
@@ -825,6 +857,7 @@
 				AC79CB51181CEAC500DBE03E /* YGlobalData.m in Sources */,
 				AC79CB4B181CDEC100DBE03E /* YBaseButton.m in Sources */,
 				AC79CB45181CDD1700DBE03E /* BaseViewController.m in Sources */,
+				2201B2581A78E0500080E78F /* YJTabBarItem.m in Sources */,
 				2201B24C1A78DD730080E78F /* YJCustomActionSheet.m in Sources */,
 				AC79CB09181BEE0300DBE03E /* JSONModelArray.m in Sources */,
 				AC79CB0F181BEE0300DBE03E /* JSONModel+networking.m in Sources */,
@@ -833,6 +866,7 @@
 				AC79CB24181BEE0300DBE03E /* UIScrollView+SVPullToRefresh.m in Sources */,
 				AC79CB0D181BEE0300DBE03E /* JSONAPI.m in Sources */,
 				AC79CB11181BEE0300DBE03E /* JSONValueTransformer.m in Sources */,
+				2201B2561A78E0500080E78F /* YJTabBar.m in Sources */,
 				AC79CB20181BEE0300DBE03E /* MKNetworkEngine.m in Sources */,
 				AC79CB16181BEE0300DBE03E /* DDTTYLogger.m in Sources */,
 				AC79CB41181C016D00DBE03E /* YExUIView.m in Sources */,
