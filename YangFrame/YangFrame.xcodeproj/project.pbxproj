@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2201B2451A78DD730080E78F /* UIButton+YJActionSheetButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2201B2381A78DD730080E78F /* UIButton+YJActionSheetButton.m */; };
+		2201B2461A78DD730080E78F /* cus_actionSheet_cancelBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2201B23A1A78DD730080E78F /* cus_actionSheet_cancelBtn@2x.png */; };
+		2201B2471A78DD730080E78F /* cus_actionSheet_cancelBtn_h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2201B23B1A78DD730080E78F /* cus_actionSheet_cancelBtn_h@2x.png */; };
+		2201B2481A78DD730080E78F /* cus_actionSheet_destructiveBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2201B23C1A78DD730080E78F /* cus_actionSheet_destructiveBtn@2x.png */; };
+		2201B2491A78DD730080E78F /* cus_actionSheet_destructiveBtn_h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2201B23D1A78DD730080E78F /* cus_actionSheet_destructiveBtn_h@2x.png */; };
+		2201B24A1A78DD730080E78F /* cus_actionSheet_otherBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2201B23E1A78DD730080E78F /* cus_actionSheet_otherBtn@2x.png */; };
+		2201B24B1A78DD730080E78F /* cus_actionSheet_otherBtn_h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2201B23F1A78DD730080E78F /* cus_actionSheet_otherBtn_h@2x.png */; };
+		2201B24C1A78DD730080E78F /* YJCustomActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 2201B2411A78DD730080E78F /* YJCustomActionSheet.m */; };
+		2201B24D1A78DD730080E78F /* YJAlignmentLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2201B2441A78DD730080E78F /* YJAlignmentLabel.m */; };
 		AC79CA7F181BE84500DBE03E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC79CA7E181BE84500DBE03E /* Foundation.framework */; };
 		AC79CA81181BE84500DBE03E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC79CA80181BE84500DBE03E /* CoreGraphics.framework */; };
 		AC79CA83181BE84500DBE03E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC79CA82181BE84500DBE03E /* UIKit.framework */; };
@@ -86,6 +95,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2201B2371A78DD730080E78F /* UIButton+YJActionSheetButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+YJActionSheetButton.h"; sourceTree = "<group>"; };
+		2201B2381A78DD730080E78F /* UIButton+YJActionSheetButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+YJActionSheetButton.m"; sourceTree = "<group>"; };
+		2201B23A1A78DD730080E78F /* cus_actionSheet_cancelBtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cus_actionSheet_cancelBtn@2x.png"; sourceTree = "<group>"; };
+		2201B23B1A78DD730080E78F /* cus_actionSheet_cancelBtn_h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cus_actionSheet_cancelBtn_h@2x.png"; sourceTree = "<group>"; };
+		2201B23C1A78DD730080E78F /* cus_actionSheet_destructiveBtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cus_actionSheet_destructiveBtn@2x.png"; sourceTree = "<group>"; };
+		2201B23D1A78DD730080E78F /* cus_actionSheet_destructiveBtn_h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cus_actionSheet_destructiveBtn_h@2x.png"; sourceTree = "<group>"; };
+		2201B23E1A78DD730080E78F /* cus_actionSheet_otherBtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cus_actionSheet_otherBtn@2x.png"; sourceTree = "<group>"; };
+		2201B23F1A78DD730080E78F /* cus_actionSheet_otherBtn_h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cus_actionSheet_otherBtn_h@2x.png"; sourceTree = "<group>"; };
+		2201B2401A78DD730080E78F /* YJCustomActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJCustomActionSheet.h; sourceTree = "<group>"; };
+		2201B2411A78DD730080E78F /* YJCustomActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJCustomActionSheet.m; sourceTree = "<group>"; };
+		2201B2431A78DD730080E78F /* YJAlignmentLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJAlignmentLabel.h; sourceTree = "<group>"; };
+		2201B2441A78DD730080E78F /* YJAlignmentLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJAlignmentLabel.m; sourceTree = "<group>"; };
 		AC79CA7B181BE84500DBE03E /* YangFrame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YangFrame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC79CA7E181BE84500DBE03E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		AC79CA80181BE84500DBE03E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -248,6 +269,49 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2201B2351A78DD730080E78F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2201B2361A78DD730080E78F /* ActionSheet */,
+				2201B2421A78DD730080E78F /* AlignmentLabel */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		2201B2361A78DD730080E78F /* ActionSheet */ = {
+			isa = PBXGroup;
+			children = (
+				2201B2371A78DD730080E78F /* UIButton+YJActionSheetButton.h */,
+				2201B2381A78DD730080E78F /* UIButton+YJActionSheetButton.m */,
+				2201B2391A78DD730080E78F /* YJCustomActionSheet */,
+				2201B2401A78DD730080E78F /* YJCustomActionSheet.h */,
+				2201B2411A78DD730080E78F /* YJCustomActionSheet.m */,
+			);
+			path = ActionSheet;
+			sourceTree = "<group>";
+		};
+		2201B2391A78DD730080E78F /* YJCustomActionSheet */ = {
+			isa = PBXGroup;
+			children = (
+				2201B23A1A78DD730080E78F /* cus_actionSheet_cancelBtn@2x.png */,
+				2201B23B1A78DD730080E78F /* cus_actionSheet_cancelBtn_h@2x.png */,
+				2201B23C1A78DD730080E78F /* cus_actionSheet_destructiveBtn@2x.png */,
+				2201B23D1A78DD730080E78F /* cus_actionSheet_destructiveBtn_h@2x.png */,
+				2201B23E1A78DD730080E78F /* cus_actionSheet_otherBtn@2x.png */,
+				2201B23F1A78DD730080E78F /* cus_actionSheet_otherBtn_h@2x.png */,
+			);
+			path = YJCustomActionSheet;
+			sourceTree = "<group>";
+		};
+		2201B2421A78DD730080E78F /* AlignmentLabel */ = {
+			isa = PBXGroup;
+			children = (
+				2201B2431A78DD730080E78F /* YJAlignmentLabel.h */,
+				2201B2441A78DD730080E78F /* YJAlignmentLabel.m */,
+			);
+			path = AlignmentLabel;
+			sourceTree = "<group>";
+		};
 		AC79CA72181BE84500DBE03E = {
 			isa = PBXGroup;
 			children = (
@@ -336,6 +400,7 @@
 				AC79CB32181BF49E00DBE03E /* Utils */,
 				AC79CAB7181BEE0300DBE03E /* Network */,
 				AC79CAB4181BEE0300DBE03E /* BaseKit */,
+				2201B2351A78DD730080E78F /* Views */,
 				AC7D2B73181E9D5C004AD9F7 /* Welcome */,
 			);
 			path = Classes;
@@ -699,8 +764,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2201B2471A78DD730080E78F /* cus_actionSheet_cancelBtn_h@2x.png in Resources */,
 				AC79CA8B181BE84500DBE03E /* InfoPlist.strings in Resources */,
+				2201B24A1A78DD730080E78F /* cus_actionSheet_otherBtn@2x.png in Resources */,
+				2201B2491A78DD730080E78F /* cus_actionSheet_destructiveBtn_h@2x.png in Resources */,
+				2201B24B1A78DD730080E78F /* cus_actionSheet_otherBtn_h@2x.png in Resources */,
+				2201B2481A78DD730080E78F /* cus_actionSheet_destructiveBtn@2x.png in Resources */,
 				AC79CA96181BE84500DBE03E /* Images.xcassets in Resources */,
+				2201B2461A78DD730080E78F /* cus_actionSheet_cancelBtn@2x.png in Resources */,
 				AC79CB26181BEE8100DBE03E /* YDefaultLocalize.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -740,18 +811,21 @@
 				AC7D2B65181E9B78004AD9F7 /* MBProgressHUD.m in Sources */,
 				AC79CB3B181BFC4100DBE03E /* YViewUtils.m in Sources */,
 				AC79CB48181CDE7800DBE03E /* YBaseTextField.m in Sources */,
+				2201B2451A78DD730080E78F /* UIButton+YJActionSheetButton.m in Sources */,
 				AC7D2B6D181E9CD2004AD9F7 /* NavigationViewController.m in Sources */,
 				AC79CB38181BF50500DBE03E /* YUtils.m in Sources */,
 				AC79CB1C181BEE0300DBE03E /* NSDictionary+RequestEncoding.m in Sources */,
 				AC79CB10181BEE0300DBE03E /* JSONKeyMapper.m in Sources */,
 				AC79CB1D181BEE0300DBE03E /* NSString+MKNetworkKitAdditions.m in Sources */,
 				AC79CB1A181BEE0300DBE03E /* NSData+MKBase64.m in Sources */,
+				2201B24D1A78DD730080E78F /* YJAlignmentLabel.m in Sources */,
 				AC7D2B66181E9B78004AD9F7 /* SFHFKeychainUtils.m in Sources */,
 				AC79CB4E181CE03300DBE03E /* YFontUtils.m in Sources */,
 				AC79CB07181BEE0300DBE03E /* JSONKit.m in Sources */,
 				AC79CB51181CEAC500DBE03E /* YGlobalData.m in Sources */,
 				AC79CB4B181CDEC100DBE03E /* YBaseButton.m in Sources */,
 				AC79CB45181CDD1700DBE03E /* BaseViewController.m in Sources */,
+				2201B24C1A78DD730080E78F /* YJCustomActionSheet.m in Sources */,
 				AC79CB09181BEE0300DBE03E /* JSONModelArray.m in Sources */,
 				AC79CB0F181BEE0300DBE03E /* JSONModel+networking.m in Sources */,
 				AC79CA8D181BE84500DBE03E /* main.m in Sources */,
