@@ -23,11 +23,15 @@
         _itemImageView.userInteractionEnabled = YES;
         [self addSubview:_itemImageView];
         
-        UIImage *img = [UIImage imageNamed:@"has_unread"];        // 暂时使用小图
+        UIImage *img = [UIImage imageNamed:@"tab_badgeValue_bg"];        // 暂时使用小图
         _badgeBg = [[UIImageView alloc] initWithImage:img];
-        _badgeBg.frame = CGRectMake(frame.size.width/2 + 10, 5, img.size.width, img.size.height);
+        _badgeBgFrame = CGRectMake(frame.size.width/2 + 10, 3, img.size.width, img.size.height);
+        _badgeBg.frame = _badgeBgFrame;
         _badgeBg.userInteractionEnabled = YES;
         [self addSubview:_badgeBg];
+        
+        _redPointFrame = _badgeBgFrame;
+        _redPointFrame.size = CGSizeMake(10, 10);
         
         _badgeLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, img.size.width, img.size.height)];
         _badgeLabel.backgroundColor = [UIColor clearColor];
@@ -40,7 +44,7 @@
         
         CGRect rect = _badgeBg.frame;
         rect.origin.y += rect.size.height;
-        _titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 35, frame.size.width, 10)];
+        _titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 32, frame.size.width, 10)];
         _titleLabel.backgroundColor = [UIColor clearColor];
         _titleLabel.textAlignment = NSTextAlignmentCenter;
         _titleLabel.textColor = [UIColor whiteColor];
@@ -89,8 +93,14 @@
         _badgeValue = [badgeValue copy];
     }
     if (_badgeValue) {
-        _badgeLabel.text = _badgeValue;
         _badgeBg.hidden = NO;
+        if (_badgeValue.integerValue > 0) {
+            _badgeLabel.text = _badgeValue;
+            _badgeBg.frame = _badgeBgFrame;
+        } else { // 显示 红点
+            _badgeLabel.text = nil;
+            _badgeBg.frame = _redPointFrame;
+        }
     } else {
         _badgeBg.hidden = YES;
     }

@@ -15,12 +15,18 @@
     UILabel *_badgeLabel;
     
     UILabel *_titleLabel;
+    
+    CGRect _badgeBgFrame;
+    CGRect _redPointFrame;
 }
 @property (nonatomic,strong) UIImage *normalImage;
 @property (nonatomic,strong) UIImage *highlightImage;
 
 @property (nonatomic,assign) BOOL selected;
 
+/**
+ *  如果是0，则只显示 小红点。如果是 nil，则不显示
+ */
 @property (nonatomic,copy) NSString *badgeValue;
 
 @property (nonatomic,copy) NSString *title;
