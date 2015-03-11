@@ -22,6 +22,13 @@
 
 @end
 
+@interface NSString (MD5Token)
+
+- (NSString *) MD5TokenString;
+
+@end
+
+
 @interface NSNumber (NumericValueHack)
 - (NSNumber *)numericValue;
 @end
