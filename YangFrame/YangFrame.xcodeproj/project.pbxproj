@@ -20,6 +20,8 @@
 		2201B26F1A78E2C20080E78F /* cus_actionSheet_otherBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2201B2661A78E2C20080E78F /* cus_actionSheet_otherBtn@2x.png */; };
 		2201B2701A78E2C20080E78F /* cus_actionSheet_otherBtn_h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2201B2671A78E2C20080E78F /* cus_actionSheet_otherBtn_h@2x.png */; };
 		22BD202F1AB02ACE0022D987 /* UIView+Util.m in Sources */ = {isa = PBXBuildFile; fileRef = 22BD202E1AB02ACE0022D987 /* UIView+Util.m */; };
+		22BD20331AB02BED0022D987 /* NSString+Util.m in Sources */ = {isa = PBXBuildFile; fileRef = 22BD20321AB02BED0022D987 /* NSString+Util.m */; };
+		22BD20371AB02C400022D987 /* UITextField+Util.m in Sources */ = {isa = PBXBuildFile; fileRef = 22BD20361AB02C400022D987 /* UITextField+Util.m */; };
 		AC79CA7F181BE84500DBE03E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC79CA7E181BE84500DBE03E /* Foundation.framework */; };
 		AC79CA81181BE84500DBE03E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC79CA80181BE84500DBE03E /* CoreGraphics.framework */; };
 		AC79CA83181BE84500DBE03E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC79CA82181BE84500DBE03E /* UIKit.framework */; };
@@ -119,6 +121,10 @@
 		2201B2671A78E2C20080E78F /* cus_actionSheet_otherBtn_h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cus_actionSheet_otherBtn_h@2x.png"; sourceTree = "<group>"; };
 		22BD202D1AB02ACE0022D987 /* UIView+Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Util.h"; sourceTree = "<group>"; };
 		22BD202E1AB02ACE0022D987 /* UIView+Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Util.m"; sourceTree = "<group>"; };
+		22BD20311AB02BED0022D987 /* NSString+Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Util.h"; sourceTree = "<group>"; };
+		22BD20321AB02BED0022D987 /* NSString+Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Util.m"; sourceTree = "<group>"; };
+		22BD20351AB02C400022D987 /* UITextField+Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+Util.h"; sourceTree = "<group>"; };
+		22BD20361AB02C400022D987 /* UITextField+Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+Util.m"; sourceTree = "<group>"; };
 		AC79CA7B181BE84500DBE03E /* YangFrame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YangFrame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC79CA7E181BE84500DBE03E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		AC79CA80181BE84500DBE03E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -295,6 +301,8 @@
 				2201B25C1A78E2C20080E78F /* YJCustomActionSheet */,
 				2201B24F1A78E0500080E78F /* YJTabBarController */,
 				22BD202C1AB02AC40022D987 /* YJUIView */,
+				22BD20301AB02BED0022D987 /* YJNSString */,
+				22BD20341AB02C400022D987 /* YJTextField */,
 			);
 			path = Mine;
 			sourceTree = "<group>";
@@ -353,6 +361,24 @@
 				22BD202E1AB02ACE0022D987 /* UIView+Util.m */,
 			);
 			path = YJUIView;
+			sourceTree = "<group>";
+		};
+		22BD20301AB02BED0022D987 /* YJNSString */ = {
+			isa = PBXGroup;
+			children = (
+				22BD20311AB02BED0022D987 /* NSString+Util.h */,
+				22BD20321AB02BED0022D987 /* NSString+Util.m */,
+			);
+			path = YJNSString;
+			sourceTree = "<group>";
+		};
+		22BD20341AB02C400022D987 /* YJTextField */ = {
+			isa = PBXGroup;
+			children = (
+				22BD20351AB02C400022D987 /* UITextField+Util.h */,
+				22BD20361AB02C400022D987 /* UITextField+Util.m */,
+			);
+			path = YJTextField;
 			sourceTree = "<group>";
 		};
 		AC79CA72181BE84500DBE03E = {
@@ -857,6 +883,7 @@
 				AC7D2B65181E9B78004AD9F7 /* MBProgressHUD.m in Sources */,
 				AC79CB3B181BFC4100DBE03E /* YViewUtils.m in Sources */,
 				AC79CB48181CDE7800DBE03E /* YBaseTextField.m in Sources */,
+				22BD20331AB02BED0022D987 /* NSString+Util.m in Sources */,
 				AC7D2B6D181E9CD2004AD9F7 /* NavigationViewController.m in Sources */,
 				AC79CB38181BF50500DBE03E /* YUtils.m in Sources */,
 				AC79CB1C181BEE0300DBE03E /* NSDictionary+RequestEncoding.m in Sources */,
@@ -865,6 +892,7 @@
 				2201B2571A78E0500080E78F /* YJTabBarController.m in Sources */,
 				AC79CB1A181BEE0300DBE03E /* NSData+MKBase64.m in Sources */,
 				AC7D2B66181E9B78004AD9F7 /* SFHFKeychainUtils.m in Sources */,
+				22BD20371AB02C400022D987 /* UITextField+Util.m in Sources */,
 				2201B26A1A78E2C20080E78F /* YJCustomActionSheet.m in Sources */,
 				AC79CB4E181CE03300DBE03E /* YFontUtils.m in Sources */,
 				AC79CB07181BEE0300DBE03E /* JSONKit.m in Sources */,

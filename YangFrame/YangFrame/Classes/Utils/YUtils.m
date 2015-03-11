@@ -121,7 +121,7 @@ static id localDict = nil;
     
     NSMutableString* dirPath = [[NSMutableString alloc] initWithString:docDir];
     NSArray* array = [fileName componentsSeparatedByString:@"/"];
-    int count = [array count];
+    NSInteger count = [array count];
     for (int i = 0; i < count-1; i++) {
         [dirPath appendFormat:@"/%@",array[i]];
     }
@@ -477,120 +477,9 @@ static id localDict = nil;
 {
 }
 
-#pragma mark - 银行卡号 4 位 分割
-+ (NSString*)getFormatCardID:(NSString*)cardID{   // 将卡号转换为4个一空格的卡号
-    //    return formatCreditCardNumber(cardID);
-    
-    NSString *string = [YUtils seperateString:cardID seperator:kSeperatorCreditCardNumber];
-    return string;
-}
-
 + (NSString*)getNormalString:(NSString*)string{   // 将4个一空格的卡号转为正常的卡号
     return cleanNumber(string);
     //   return [cardID stringByReplacingOccurrencesOfString:@" " withString:@""];
-}
-
-#pragma mark 手机号码 3，4，4 分割
-+ (NSString*)getFormatMobileNumber:(NSString *)mobileNum
-{
-    if (mobileNum) {
-        NSString *string = [YUtils seperateString:mobileNum seperator:kSeperatorMobileNumber];
-        return string;
-    }else {
-        return nil;
-    }
-    
-}
-
-#pragma mark 移动光标位置
-+ (int)spaceCountOfString:(NSString *)string {
-    NSArray *arr = [string componentsSeparatedByString:@" "];
-    int count = arr.count - 1;
-    if (count < 0) {
-        count = 0;
-    }
-    return count;
-}
-
-+ (void)moveCaretOfTextfield:(UITextField *)textField range:(NSRange)range replacementString:(NSString *)string source:(NSString *)source seperator:(NSString *)seperator
-{
-    if([textField conformsToProtocol:@protocol(UITextInput)])
-    {
-        id<UITextInput>textInput = (id<UITextInput>)textField;
-        
-        // 复制一份 source,改成可变字符串 ，source 是没有格式化的，可以得到当前光标位置
-        NSMutableString *cardNo = [[NSMutableString alloc]initWithString:source];
-        int currentIndex = range.location+string.length; // 修改后的位置
-        NSString *sub = [cardNo substringToIndex:currentIndex]; // 修改后的 光标之前的字符串，没有格式化
-        int oldSpaceCount = [YUtils spaceCountOfString:sub];  //  格式化之前的 空格 的个数
-        NSString *normalSub = [YUtils getNormalString:sub];   // 修改的字符串 去掉所有的空格
-        NSString *formatSub = [YUtils seperateString:normalSub seperator:seperator]; //  重新格式化 光标之前的字符串
-        int newSpaceCount = [YUtils spaceCountOfString:formatSub];    // 计算 新空格的个数
-        
-        int count = newSpaceCount - oldSpaceCount; // 计算空格差
-        
-        // 从左边计算 偏移量，移动光标
-        UITextPosition *startPos = [textInput positionFromPosition:textInput.beginningOfDocument offset:currentIndex+count];
-        [textInput setSelectedTextRange:[textInput textRangeFromPosition:startPos toPosition:startPos]];
-    }
-}
-
-#pragma mark 新的分割字符串的方法
-+ (NSString*)seperateString:(NSString *)string seperator:(NSString *)seperator {
-    // 清楚 string 前后空格
-    NSCharacterSet* set = [NSCharacterSet whitespaceCharacterSet];
-    NSString *newStr = [string stringByTrimmingCharactersInSet:set];
-    
-    // 字符串为nil或空。则直接返回。
-    if (newStr.length == 0) {
-        return newStr;
-    }
-    // seperator 为nil或空。则直接返回。
-    if (seperator.length == 0) {
-        return string;
-    }
-    // 把 分割的 要求字符串 分成数组
-    NSArray *seperatorArr = [seperator componentsSeparatedByString:@","];
-    NSString *normalStr = cleanNumber(newStr);
-    NSMutableArray* array = [NSMutableArray array];
-    
-    // 放子 字符串
-    NSMutableString* subStr = [[NSMutableString alloc] initWithCapacity:1];
-    // 默认起始位置
-    int seperatorIndex = 0;
-    int location = 0;
-    // 遍历 字符串
-    for (NSInteger i = 0; i < normalStr.length; i++)
-    {
-        // 获取 需要的 长度
-        int length = [[seperatorArr objectAtIndex:seperatorIndex] intValue];
-        NSRange r = NSMakeRange(location, 1);
-        
-        // 获取每一位 字符，并加到 字符串中
-        NSString *str = [normalStr substringWithRange:r];
-        [subStr appendString:str];
-        
-        // 子字符串达到长度，就加到数组中
-        if (subStr.length == length) {
-            [array addObject:subStr];
-            // 取下一个长度
-            if (seperatorIndex != seperatorArr.count-1) {
-                seperatorIndex++;
-            }
-            // 重新 初始化 子字符串
-            subStr = [[NSMutableString alloc] initWithCapacity:1];
-        }
-        else if (i == normalStr.length -1) {
-            // 把剩下的字符串 也放到数组中
-            [array addObject:subStr];
-        }
-        
-        location++;
-    }
-    
-    // 把 分割后的数组，中间加上空格，拼成字符串
-    NSString *formatStr =[array componentsJoinedByString:@" "];
-    return  [formatStr stringByTrimmingCharactersInSet:set];
 }
 
 + (UIView *)getTableViewLoadMoreView{
