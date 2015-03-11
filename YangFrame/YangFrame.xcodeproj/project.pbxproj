@@ -22,6 +22,8 @@
 		22BD202F1AB02ACE0022D987 /* UIView+Util.m in Sources */ = {isa = PBXBuildFile; fileRef = 22BD202E1AB02ACE0022D987 /* UIView+Util.m */; };
 		22BD20331AB02BED0022D987 /* NSString+Util.m in Sources */ = {isa = PBXBuildFile; fileRef = 22BD20321AB02BED0022D987 /* NSString+Util.m */; };
 		22BD20371AB02C400022D987 /* UITextField+Util.m in Sources */ = {isa = PBXBuildFile; fileRef = 22BD20361AB02C400022D987 /* UITextField+Util.m */; };
+		22BD203B1AB02DE60022D987 /* NSDate+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 22BD203A1AB02DE60022D987 /* NSDate+Utilities.m */; };
+		22BD203E1AB02F250022D987 /* NSString+PJR.m in Sources */ = {isa = PBXBuildFile; fileRef = 22BD203D1AB02F250022D987 /* NSString+PJR.m */; };
 		AC79CA7F181BE84500DBE03E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC79CA7E181BE84500DBE03E /* Foundation.framework */; };
 		AC79CA81181BE84500DBE03E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC79CA80181BE84500DBE03E /* CoreGraphics.framework */; };
 		AC79CA83181BE84500DBE03E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC79CA82181BE84500DBE03E /* UIKit.framework */; };
@@ -125,6 +127,10 @@
 		22BD20321AB02BED0022D987 /* NSString+Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Util.m"; sourceTree = "<group>"; };
 		22BD20351AB02C400022D987 /* UITextField+Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+Util.h"; sourceTree = "<group>"; };
 		22BD20361AB02C400022D987 /* UITextField+Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+Util.m"; sourceTree = "<group>"; };
+		22BD20391AB02DE60022D987 /* NSDate+Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Utilities.h"; sourceTree = "<group>"; };
+		22BD203A1AB02DE60022D987 /* NSDate+Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Utilities.m"; sourceTree = "<group>"; };
+		22BD203C1AB02F250022D987 /* NSString+PJR.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+PJR.h"; sourceTree = "<group>"; };
+		22BD203D1AB02F250022D987 /* NSString+PJR.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+PJR.m"; sourceTree = "<group>"; };
 		AC79CA7B181BE84500DBE03E /* YangFrame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YangFrame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC79CA7E181BE84500DBE03E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		AC79CA80181BE84500DBE03E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -368,6 +374,8 @@
 			children = (
 				22BD20311AB02BED0022D987 /* NSString+Util.h */,
 				22BD20321AB02BED0022D987 /* NSString+Util.m */,
+				22BD203C1AB02F250022D987 /* NSString+PJR.h */,
+				22BD203D1AB02F250022D987 /* NSString+PJR.m */,
 			);
 			path = YJNSString;
 			sourceTree = "<group>";
@@ -379,6 +387,15 @@
 				22BD20361AB02C400022D987 /* UITextField+Util.m */,
 			);
 			path = YJTextField;
+			sourceTree = "<group>";
+		};
+		22BD20381AB02DE60022D987 /* NSDate */ = {
+			isa = PBXGroup;
+			children = (
+				22BD20391AB02DE60022D987 /* NSDate+Utilities.h */,
+				22BD203A1AB02DE60022D987 /* NSDate+Utilities.m */,
+			);
+			path = NSDate;
 			sourceTree = "<group>";
 		};
 		AC79CA72181BE84500DBE03E = {
@@ -551,6 +568,7 @@
 				AC79CB00181BEE0300DBE03E /* SVPullToRefresh */,
 				AC7D2B5F181E9B78004AD9F7 /* MBProgressHUD */,
 				AC7D2B62181E9B78004AD9F7 /* SFHFKeychainUtils */,
+				22BD20381AB02DE60022D987 /* NSDate */,
 			);
 			path = Include;
 			sourceTree = "<group>";
@@ -889,6 +907,7 @@
 				AC79CB1C181BEE0300DBE03E /* NSDictionary+RequestEncoding.m in Sources */,
 				AC79CB10181BEE0300DBE03E /* JSONKeyMapper.m in Sources */,
 				AC79CB1D181BEE0300DBE03E /* NSString+MKNetworkKitAdditions.m in Sources */,
+				22BD203B1AB02DE60022D987 /* NSDate+Utilities.m in Sources */,
 				2201B2571A78E0500080E78F /* YJTabBarController.m in Sources */,
 				AC79CB1A181BEE0300DBE03E /* NSData+MKBase64.m in Sources */,
 				AC7D2B66181E9B78004AD9F7 /* SFHFKeychainUtils.m in Sources */,
@@ -912,6 +931,7 @@
 				AC79CB16181BEE0300DBE03E /* DDTTYLogger.m in Sources */,
 				AC79CB41181C016D00DBE03E /* YExUIView.m in Sources */,
 				AC79CB0E181BEE0300DBE03E /* JSONHTTPClient.m in Sources */,
+				22BD203E1AB02F250022D987 /* NSString+PJR.m in Sources */,
 				AC79CB1E181BEE0300DBE03E /* UIAlertView+MKNetworkKitAdditions.m in Sources */,
 				22BD202F1AB02ACE0022D987 /* UIView+Util.m in Sources */,
 				AC79CB08181BEE0300DBE03E /* JSONModel.m in Sources */,
