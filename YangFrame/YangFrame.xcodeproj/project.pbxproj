@@ -19,6 +19,7 @@
 		2201B26E1A78E2C20080E78F /* cus_actionSheet_destructiveBtn_h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2201B2651A78E2C20080E78F /* cus_actionSheet_destructiveBtn_h@2x.png */; };
 		2201B26F1A78E2C20080E78F /* cus_actionSheet_otherBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2201B2661A78E2C20080E78F /* cus_actionSheet_otherBtn@2x.png */; };
 		2201B2701A78E2C20080E78F /* cus_actionSheet_otherBtn_h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2201B2671A78E2C20080E78F /* cus_actionSheet_otherBtn_h@2x.png */; };
+		22B23BB31B2FCC5A0070C1CB /* UIDevice+IPAddress.m in Sources */ = {isa = PBXBuildFile; fileRef = 22B23BB21B2FCC5A0070C1CB /* UIDevice+IPAddress.m */; };
 		22BD202F1AB02ACE0022D987 /* UIView+Util.m in Sources */ = {isa = PBXBuildFile; fileRef = 22BD202E1AB02ACE0022D987 /* UIView+Util.m */; };
 		22BD20331AB02BED0022D987 /* NSString+Util.m in Sources */ = {isa = PBXBuildFile; fileRef = 22BD20321AB02BED0022D987 /* NSString+Util.m */; };
 		22BD20371AB02C400022D987 /* UITextField+Util.m in Sources */ = {isa = PBXBuildFile; fileRef = 22BD20361AB02C400022D987 /* UITextField+Util.m */; };
@@ -121,6 +122,8 @@
 		2201B2651A78E2C20080E78F /* cus_actionSheet_destructiveBtn_h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cus_actionSheet_destructiveBtn_h@2x.png"; sourceTree = "<group>"; };
 		2201B2661A78E2C20080E78F /* cus_actionSheet_otherBtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cus_actionSheet_otherBtn@2x.png"; sourceTree = "<group>"; };
 		2201B2671A78E2C20080E78F /* cus_actionSheet_otherBtn_h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cus_actionSheet_otherBtn_h@2x.png"; sourceTree = "<group>"; };
+		22B23BB11B2FCC5A0070C1CB /* UIDevice+IPAddress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+IPAddress.h"; sourceTree = "<group>"; };
+		22B23BB21B2FCC5A0070C1CB /* UIDevice+IPAddress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+IPAddress.m"; sourceTree = "<group>"; };
 		22BD202D1AB02ACE0022D987 /* UIView+Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Util.h"; sourceTree = "<group>"; };
 		22BD202E1AB02ACE0022D987 /* UIView+Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Util.m"; sourceTree = "<group>"; };
 		22BD20311AB02BED0022D987 /* NSString+Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Util.h"; sourceTree = "<group>"; };
@@ -303,6 +306,7 @@
 		2201B24E1A78E0500080E78F /* Mine */ = {
 			isa = PBXGroup;
 			children = (
+				22B23BB01B2FCC5A0070C1CB /* UIDevice */,
 				2201B2591A78E2C20080E78F /* YJAlignmentLabel */,
 				2201B25C1A78E2C20080E78F /* YJCustomActionSheet */,
 				2201B24F1A78E0500080E78F /* YJTabBarController */,
@@ -358,6 +362,15 @@
 				2201B2671A78E2C20080E78F /* cus_actionSheet_otherBtn_h@2x.png */,
 			);
 			path = YJCustomActionSheetResource;
+			sourceTree = "<group>";
+		};
+		22B23BB01B2FCC5A0070C1CB /* UIDevice */ = {
+			isa = PBXGroup;
+			children = (
+				22B23BB11B2FCC5A0070C1CB /* UIDevice+IPAddress.h */,
+				22B23BB21B2FCC5A0070C1CB /* UIDevice+IPAddress.m */,
+			);
+			path = UIDevice;
 			sourceTree = "<group>";
 		};
 		22BD202C1AB02AC40022D987 /* YJUIView */ = {
@@ -897,6 +910,7 @@
 				AC79CB15181BEE0300DBE03E /* DDLog.m in Sources */,
 				AC79CB22181BEE0300DBE03E /* Reachability.m in Sources */,
 				AC79CB23181BEE0300DBE03E /* UIScrollView+SVInfiniteScrolling.m in Sources */,
+				22B23BB31B2FCC5A0070C1CB /* UIDevice+IPAddress.m in Sources */,
 				AC79CB1F181BEE0300DBE03E /* UIImageView+MKNetworkKitAdditions.m in Sources */,
 				AC7D2B65181E9B78004AD9F7 /* MBProgressHUD.m in Sources */,
 				AC79CB3B181BFC4100DBE03E /* YViewUtils.m in Sources */,
