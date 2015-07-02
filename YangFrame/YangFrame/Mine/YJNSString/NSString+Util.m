@@ -76,6 +76,38 @@
                                                                                                  CFStringConvertNSStringEncodingToEncoding(encoding));
 }
 
++ (BOOL)isEmptyString:(NSString *)string
+{
+    if (!string) {
+        return YES;
+    }
+    if (![string isKindOfClass:[NSString class]]) {
+        return YES;
+    }
+    return string.length == 0;
+}
+
+
++ (NSString *)stringFromDictValue:(id)dictValue {
+    if (!dictValue || [dictValue isKindOfClass:[NSString class]] || [dictValue isKindOfClass:[NSMutableString class]]) {
+        return dictValue;
+    }
+    
+    if ([dictValue isKindOfClass:[NSNull class]]) {
+        return nil;
+    } else {
+        return [NSString stringWithFormat:@"%@",dictValue];
+    }
+}
+
++ (NSString *)emptyStringFromDictValue:(id)dictValue {
+    if (![NSString stringFromDictValue:dictValue]) {
+        return @"";
+    } else {
+        return [NSString stringWithFormat:@"%@",dictValue];
+    }
+}
+
 @end
 
 @implementation NSString (MD5Token)

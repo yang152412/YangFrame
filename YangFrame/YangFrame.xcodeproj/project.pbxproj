@@ -25,6 +25,11 @@
 		22BD20371AB02C400022D987 /* UITextField+Util.m in Sources */ = {isa = PBXBuildFile; fileRef = 22BD20361AB02C400022D987 /* UITextField+Util.m */; };
 		22BD203B1AB02DE60022D987 /* NSDate+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 22BD203A1AB02DE60022D987 /* NSDate+Utilities.m */; };
 		22BD203E1AB02F250022D987 /* NSString+PJR.m in Sources */ = {isa = PBXBuildFile; fileRef = 22BD203D1AB02F250022D987 /* NSString+PJR.m */; };
+		22EA81AC1B44DDB900B56BB5 /* LabelFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 22EA81A71B44DDB900B56BB5 /* LabelFactory.m */; };
+		22EA81AD1B44DDB900B56BB5 /* LineFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 22EA81A91B44DDB900B56BB5 /* LineFactory.m */; };
+		22EA81AE1B44DDB900B56BB5 /* TriangleLineFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 22EA81AB1B44DDB900B56BB5 /* TriangleLineFactory.m */; };
+		22EA81B51B44DE3700B56BB5 /* UIColor+MLColorAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 22EA81B31B44DE3700B56BB5 /* UIColor+MLColorAdditions.m */; };
+		22EA81BC1B44E1C600B56BB5 /* UILabel+ContentSize.m in Sources */ = {isa = PBXBuildFile; fileRef = 22EA81BA1B44E1C600B56BB5 /* UILabel+ContentSize.m */; };
 		AC79CA7F181BE84500DBE03E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC79CA7E181BE84500DBE03E /* Foundation.framework */; };
 		AC79CA81181BE84500DBE03E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC79CA80181BE84500DBE03E /* CoreGraphics.framework */; };
 		AC79CA83181BE84500DBE03E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC79CA82181BE84500DBE03E /* UIKit.framework */; };
@@ -134,6 +139,16 @@
 		22BD203A1AB02DE60022D987 /* NSDate+Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Utilities.m"; sourceTree = "<group>"; };
 		22BD203C1AB02F250022D987 /* NSString+PJR.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+PJR.h"; sourceTree = "<group>"; };
 		22BD203D1AB02F250022D987 /* NSString+PJR.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+PJR.m"; sourceTree = "<group>"; };
+		22EA81A61B44DDB900B56BB5 /* LabelFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LabelFactory.h; sourceTree = "<group>"; };
+		22EA81A71B44DDB900B56BB5 /* LabelFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LabelFactory.m; sourceTree = "<group>"; };
+		22EA81A81B44DDB900B56BB5 /* LineFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LineFactory.h; sourceTree = "<group>"; };
+		22EA81A91B44DDB900B56BB5 /* LineFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LineFactory.m; sourceTree = "<group>"; };
+		22EA81AA1B44DDB900B56BB5 /* TriangleLineFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TriangleLineFactory.h; sourceTree = "<group>"; };
+		22EA81AB1B44DDB900B56BB5 /* TriangleLineFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TriangleLineFactory.m; sourceTree = "<group>"; };
+		22EA81B21B44DE3700B56BB5 /* UIColor+MLColorAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+MLColorAdditions.h"; sourceTree = "<group>"; };
+		22EA81B31B44DE3700B56BB5 /* UIColor+MLColorAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+MLColorAdditions.m"; sourceTree = "<group>"; };
+		22EA81B91B44E1C600B56BB5 /* UILabel+ContentSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+ContentSize.h"; sourceTree = "<group>"; };
+		22EA81BA1B44E1C600B56BB5 /* UILabel+ContentSize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+ContentSize.m"; sourceTree = "<group>"; };
 		AC79CA7B181BE84500DBE03E /* YangFrame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YangFrame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC79CA7E181BE84500DBE03E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		AC79CA80181BE84500DBE03E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -306,7 +321,10 @@
 		2201B24E1A78E0500080E78F /* Mine */ = {
 			isa = PBXGroup;
 			children = (
+				22EA81A51B44DDB900B56BB5 /* Factory */,
 				22B23BB01B2FCC5A0070C1CB /* UIDevice */,
+				22EA81AF1B44DE3700B56BB5 /* UIColor */,
+				22EA81B61B44E1C600B56BB5 /* UILabel */,
 				2201B2591A78E2C20080E78F /* YJAlignmentLabel */,
 				2201B25C1A78E2C20080E78F /* YJCustomActionSheet */,
 				2201B24F1A78E0500080E78F /* YJTabBarController */,
@@ -409,6 +427,37 @@
 				22BD203A1AB02DE60022D987 /* NSDate+Utilities.m */,
 			);
 			path = NSDate;
+			sourceTree = "<group>";
+		};
+		22EA81A51B44DDB900B56BB5 /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				22EA81A61B44DDB900B56BB5 /* LabelFactory.h */,
+				22EA81A71B44DDB900B56BB5 /* LabelFactory.m */,
+				22EA81A81B44DDB900B56BB5 /* LineFactory.h */,
+				22EA81A91B44DDB900B56BB5 /* LineFactory.m */,
+				22EA81AA1B44DDB900B56BB5 /* TriangleLineFactory.h */,
+				22EA81AB1B44DDB900B56BB5 /* TriangleLineFactory.m */,
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
+		22EA81AF1B44DE3700B56BB5 /* UIColor */ = {
+			isa = PBXGroup;
+			children = (
+				22EA81B21B44DE3700B56BB5 /* UIColor+MLColorAdditions.h */,
+				22EA81B31B44DE3700B56BB5 /* UIColor+MLColorAdditions.m */,
+			);
+			path = UIColor;
+			sourceTree = "<group>";
+		};
+		22EA81B61B44E1C600B56BB5 /* UILabel */ = {
+			isa = PBXGroup;
+			children = (
+				22EA81B91B44E1C600B56BB5 /* UILabel+ContentSize.h */,
+				22EA81BA1B44E1C600B56BB5 /* UILabel+ContentSize.m */,
+			);
+			path = UILabel;
 			sourceTree = "<group>";
 		};
 		AC79CA72181BE84500DBE03E = {
@@ -898,6 +947,7 @@
 				AC79CB0C181BEE0300DBE03E /* NSArray+JSONModel.m in Sources */,
 				2201B2691A78E2C20080E78F /* UIButton+YJActionSheetButton.m in Sources */,
 				2201B2681A78E2C20080E78F /* YJAlignmentLabel.m in Sources */,
+				22EA81AE1B44DDB900B56BB5 /* TriangleLineFactory.m in Sources */,
 				AC79CB17181BEE0300DBE03E /* ContextFilterLogFormatter.m in Sources */,
 				AC79CB18181BEE0300DBE03E /* DispatchQueueLogFormatter.m in Sources */,
 				AC79CB0A181BEE0300DBE03E /* JSONModelClassProperty.m in Sources */,
@@ -921,6 +971,7 @@
 				AC79CB1C181BEE0300DBE03E /* NSDictionary+RequestEncoding.m in Sources */,
 				AC79CB10181BEE0300DBE03E /* JSONKeyMapper.m in Sources */,
 				AC79CB1D181BEE0300DBE03E /* NSString+MKNetworkKitAdditions.m in Sources */,
+				22EA81AC1B44DDB900B56BB5 /* LabelFactory.m in Sources */,
 				22BD203B1AB02DE60022D987 /* NSDate+Utilities.m in Sources */,
 				2201B2571A78E0500080E78F /* YJTabBarController.m in Sources */,
 				AC79CB1A181BEE0300DBE03E /* NSData+MKBase64.m in Sources */,
@@ -935,12 +986,14 @@
 				2201B2581A78E0500080E78F /* YJTabBarItem.m in Sources */,
 				AC79CB09181BEE0300DBE03E /* JSONModelArray.m in Sources */,
 				AC79CB0F181BEE0300DBE03E /* JSONModel+networking.m in Sources */,
+				22EA81B51B44DE3700B56BB5 /* UIColor+MLColorAdditions.m in Sources */,
 				AC79CA8D181BE84500DBE03E /* main.m in Sources */,
 				AC79CB14181BEE0300DBE03E /* DDFileLogger.m in Sources */,
 				AC79CB24181BEE0300DBE03E /* UIScrollView+SVPullToRefresh.m in Sources */,
 				AC79CB0D181BEE0300DBE03E /* JSONAPI.m in Sources */,
 				AC79CB11181BEE0300DBE03E /* JSONValueTransformer.m in Sources */,
 				2201B2561A78E0500080E78F /* YJTabBar.m in Sources */,
+				22EA81AD1B44DDB900B56BB5 /* LineFactory.m in Sources */,
 				AC79CB20181BEE0300DBE03E /* MKNetworkEngine.m in Sources */,
 				AC79CB16181BEE0300DBE03E /* DDTTYLogger.m in Sources */,
 				AC79CB41181C016D00DBE03E /* YExUIView.m in Sources */,
@@ -950,6 +1003,7 @@
 				22BD202F1AB02ACE0022D987 /* UIView+Util.m in Sources */,
 				AC79CB08181BEE0300DBE03E /* JSONModel.m in Sources */,
 				AC79CB35181BF4EB00DBE03E /* DeviceUtils.m in Sources */,
+				22EA81BC1B44E1C600B56BB5 /* UILabel+ContentSize.m in Sources */,
 				AC7D2B72181E9D22004AD9F7 /* YNetEngine.m in Sources */,
 				AC79CB12181BEE0300DBE03E /* DDAbstractDatabaseLogger.m in Sources */,
 				AC79CB1B181BEE0300DBE03E /* NSDate+RFC1123.m in Sources */,

@@ -21,8 +21,10 @@
 #define kColorBaseTextFieldPlaceHolder 0x999999
 
 // add by Yang
-
-
+#define COLOR_SYSTEM_Light_Gray Y_COL_RGB(0x999999)
+#define COLOR_SYSTEM_Light_Black Y_COL_RGB(0x7A7A7A)
+#define COLOR_SYSTEM_Normal_Black Y_COL_RGB(0x333333)
+#define COLOR_CELL_LINE Y_COL_RGB(0xe1e1e1)
 
 // add by Xin
 

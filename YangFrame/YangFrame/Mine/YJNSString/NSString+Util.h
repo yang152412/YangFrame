@@ -20,6 +20,13 @@
 - (NSString *)urlDecode;
 - (NSString *)urlDecodeUsingEncoding:(NSStringEncoding)encoding;
 
+// 判断空字符串
++ (BOOL)isEmptyString:(NSString *)string;
+// 从字典中获取字符串,如果为 nil，null，则返回 nil。
++ (NSString *)stringFromDictValue:(id)dictValue;
+// 从字典中获取字符串,如果为 nil，null，则返回 @""。
++ (NSString *)emptyStringFromDictValue:(id)dictValue;
+
 @end
 
 @interface NSString (MD5Token)
