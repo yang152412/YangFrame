@@ -25,6 +25,7 @@
 		225313DB1B54B4100065304E /* CharCountInputTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 225313DA1B54B4100065304E /* CharCountInputTextView.m */; };
 		225313DE1B54B4C60065304E /* UIDevice+Info.m in Sources */ = {isa = PBXBuildFile; fileRef = 225313DD1B54B4C60065304E /* UIDevice+Info.m */; };
 		225313E11B54B7880065304E /* NSString+ContentSize.m in Sources */ = {isa = PBXBuildFile; fileRef = 225313E01B54B7880065304E /* NSString+ContentSize.m */; };
+		225313E51B54DF5E0065304E /* UIButton+ContentEdgeInsets.m in Sources */ = {isa = PBXBuildFile; fileRef = 225313E41B54DF5E0065304E /* UIButton+ContentEdgeInsets.m */; };
 		22B23BB31B2FCC5A0070C1CB /* UIDevice+IPAddress.m in Sources */ = {isa = PBXBuildFile; fileRef = 22B23BB21B2FCC5A0070C1CB /* UIDevice+IPAddress.m */; };
 		22BD202F1AB02ACE0022D987 /* UIView+Util.m in Sources */ = {isa = PBXBuildFile; fileRef = 22BD202E1AB02ACE0022D987 /* UIView+Util.m */; };
 		22BD20331AB02BED0022D987 /* NSString+Util.m in Sources */ = {isa = PBXBuildFile; fileRef = 22BD20321AB02BED0022D987 /* NSString+Util.m */; };
@@ -144,6 +145,8 @@
 		225313DD1B54B4C60065304E /* UIDevice+Info.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+Info.m"; sourceTree = "<group>"; };
 		225313DF1B54B7880065304E /* NSString+ContentSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+ContentSize.h"; sourceTree = "<group>"; };
 		225313E01B54B7880065304E /* NSString+ContentSize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+ContentSize.m"; sourceTree = "<group>"; };
+		225313E31B54DF5E0065304E /* UIButton+ContentEdgeInsets.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+ContentEdgeInsets.h"; sourceTree = "<group>"; };
+		225313E41B54DF5E0065304E /* UIButton+ContentEdgeInsets.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+ContentEdgeInsets.m"; sourceTree = "<group>"; };
 		22B23BB11B2FCC5A0070C1CB /* UIDevice+IPAddress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+IPAddress.h"; sourceTree = "<group>"; };
 		22B23BB21B2FCC5A0070C1CB /* UIDevice+IPAddress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+IPAddress.m"; sourceTree = "<group>"; };
 		22BD202D1AB02ACE0022D987 /* UIView+Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Util.h"; sourceTree = "<group>"; };
@@ -341,6 +344,7 @@
 				22B23BB01B2FCC5A0070C1CB /* UIDevice */,
 				22EA81AF1B44DE3700B56BB5 /* UIColor */,
 				22EA81B61B44E1C600B56BB5 /* UILabel */,
+				225313E21B54DF310065304E /* UIButton */,
 				2201B2591A78E2C20080E78F /* YJAlignmentLabel */,
 				2201B25C1A78E2C20080E78F /* YJCustomActionSheet */,
 				2201B24F1A78E0500080E78F /* YJTabBarController */,
@@ -424,6 +428,15 @@
 				225313DA1B54B4100065304E /* CharCountInputTextView.m */,
 			);
 			path = UITextView;
+			sourceTree = "<group>";
+		};
+		225313E21B54DF310065304E /* UIButton */ = {
+			isa = PBXGroup;
+			children = (
+				225313E31B54DF5E0065304E /* UIButton+ContentEdgeInsets.h */,
+				225313E41B54DF5E0065304E /* UIButton+ContentEdgeInsets.m */,
+			);
+			path = UIButton;
 			sourceTree = "<group>";
 		};
 		22B23BB01B2FCC5A0070C1CB /* UIDevice */ = {
@@ -1028,6 +1041,7 @@
 				AC79CB1A181BEE0300DBE03E /* NSData+MKBase64.m in Sources */,
 				AC7D2B66181E9B78004AD9F7 /* SFHFKeychainUtils.m in Sources */,
 				22BD20371AB02C400022D987 /* UITextField+Util.m in Sources */,
+				225313E51B54DF5E0065304E /* UIButton+ContentEdgeInsets.m in Sources */,
 				2201B26A1A78E2C20080E78F /* YJCustomActionSheet.m in Sources */,
 				AC79CB4E181CE03300DBE03E /* YFontUtils.m in Sources */,
 				AC79CB07181BEE0300DBE03E /* JSONKit.m in Sources */,

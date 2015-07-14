@@ -7,6 +7,7 @@
 //
 
 #import "WelcomeViewController.h"
+#import "UIButton+ContentEdgeInsets.h"
 
 @interface WelcomeViewController ()
 
@@ -27,6 +28,15 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    self.title = @"Welcome";
+    
+    UIButton *button = [[UIButton alloc] init];
+    button.frame = CGRectMake(15, 150, 280, 88);
+    button.backgroundColor = [UIColor redColor];
+//    [button setTitle:@"确定" forState:UIControlStateNormal];
+//    [button setImage:[UIImage imageNamed:@"settings"] forState:UIControlStateNormal];
+    [button setImage:[UIImage imageNamed:@"settings"] title:@"确定" titlePosition: UIViewContentModeLeft additionalSpacing:15 state:UIControlStateNormal];
+    [self.view addSubview:button];
 }
 
 - (void)didReceiveMemoryWarning

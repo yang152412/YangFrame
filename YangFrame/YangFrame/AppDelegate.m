@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-
+#import "WelcomeViewController.h"
 @implementation AppDelegate
 
 @synthesize managedObjectContext = _managedObjectContext;
@@ -23,6 +23,9 @@
     
     TabBarViewController *tabCon = [[TabBarViewController alloc] init];
     self.tabBarController = tabCon;
+    
+    WelcomeViewController *wel = [[WelcomeViewController alloc] init];
+    [self.tabBarController setViewControllers:@[wel,wel]];
     
     NavigationViewController *nav = [[NavigationViewController alloc]  initWithRootViewController:self.tabBarController];
     [nav setNavigationBarHidden:YES animated:NO];
