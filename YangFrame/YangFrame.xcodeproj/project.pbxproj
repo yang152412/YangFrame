@@ -22,6 +22,7 @@
 		225313D01B54AD290065304E /* RatingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 225313CF1B54AD290065304E /* RatingView.m */; };
 		225313D41B54AE2F0065304E /* UIPlaceHolderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 225313D31B54AE2F0065304E /* UIPlaceHolderTextView.m */; };
 		225313D71B54B2B20065304E /* NSString+Luhn.m in Sources */ = {isa = PBXBuildFile; fileRef = 225313D61B54B2B20065304E /* NSString+Luhn.m */; };
+		225313DB1B54B4100065304E /* CharCountInputTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 225313DA1B54B4100065304E /* CharCountInputTextView.m */; };
 		22B23BB31B2FCC5A0070C1CB /* UIDevice+IPAddress.m in Sources */ = {isa = PBXBuildFile; fileRef = 22B23BB21B2FCC5A0070C1CB /* UIDevice+IPAddress.m */; };
 		22BD202F1AB02ACE0022D987 /* UIView+Util.m in Sources */ = {isa = PBXBuildFile; fileRef = 22BD202E1AB02ACE0022D987 /* UIView+Util.m */; };
 		22BD20331AB02BED0022D987 /* NSString+Util.m in Sources */ = {isa = PBXBuildFile; fileRef = 22BD20321AB02BED0022D987 /* NSString+Util.m */; };
@@ -136,6 +137,8 @@
 		225313D31B54AE2F0065304E /* UIPlaceHolderTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIPlaceHolderTextView.m; sourceTree = "<group>"; };
 		225313D51B54B2B20065304E /* NSString+Luhn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Luhn.h"; sourceTree = "<group>"; };
 		225313D61B54B2B20065304E /* NSString+Luhn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Luhn.m"; sourceTree = "<group>"; };
+		225313D91B54B4100065304E /* CharCountInputTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CharCountInputTextView.h; sourceTree = "<group>"; };
+		225313DA1B54B4100065304E /* CharCountInputTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CharCountInputTextView.m; sourceTree = "<group>"; };
 		22B23BB11B2FCC5A0070C1CB /* UIDevice+IPAddress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+IPAddress.h"; sourceTree = "<group>"; };
 		22B23BB21B2FCC5A0070C1CB /* UIDevice+IPAddress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+IPAddress.m"; sourceTree = "<group>"; };
 		22BD202D1AB02ACE0022D987 /* UIView+Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Util.h"; sourceTree = "<group>"; };
@@ -331,6 +334,7 @@
 			isa = PBXGroup;
 			children = (
 				22EA81A51B44DDB900B56BB5 /* Factory */,
+				22BD20301AB02BED0022D987 /* YJNSString */,
 				22B23BB01B2FCC5A0070C1CB /* UIDevice */,
 				22EA81AF1B44DE3700B56BB5 /* UIColor */,
 				22EA81B61B44E1C600B56BB5 /* UILabel */,
@@ -338,8 +342,8 @@
 				2201B25C1A78E2C20080E78F /* YJCustomActionSheet */,
 				2201B24F1A78E0500080E78F /* YJTabBarController */,
 				22BD202C1AB02AC40022D987 /* YJUIView */,
-				22BD20301AB02BED0022D987 /* YJNSString */,
 				22BD20341AB02C400022D987 /* YJTextField */,
+				225313D81B54B4010065304E /* UITextView */,
 				225313CD1B54AD160065304E /* RatingView */,
 			);
 			path = Mine;
@@ -408,6 +412,15 @@
 				225313D31B54AE2F0065304E /* UIPlaceHolderTextView.m */,
 			);
 			path = UIPlaceHolderTextView;
+			sourceTree = "<group>";
+		};
+		225313D81B54B4010065304E /* UITextView */ = {
+			isa = PBXGroup;
+			children = (
+				225313D91B54B4100065304E /* CharCountInputTextView.h */,
+				225313DA1B54B4100065304E /* CharCountInputTextView.m */,
+			);
+			path = UITextView;
 			sourceTree = "<group>";
 		};
 		22B23BB01B2FCC5A0070C1CB /* UIDevice */ = {
@@ -1002,6 +1015,7 @@
 				AC79CB38181BF50500DBE03E /* YUtils.m in Sources */,
 				AC79CB1C181BEE0300DBE03E /* NSDictionary+RequestEncoding.m in Sources */,
 				AC79CB10181BEE0300DBE03E /* JSONKeyMapper.m in Sources */,
+				225313DB1B54B4100065304E /* CharCountInputTextView.m in Sources */,
 				AC79CB1D181BEE0300DBE03E /* NSString+MKNetworkKitAdditions.m in Sources */,
 				22EA81AC1B44DDB900B56BB5 /* LabelFactory.m in Sources */,
 				22BD203B1AB02DE60022D987 /* NSDate+Utilities.m in Sources */,
