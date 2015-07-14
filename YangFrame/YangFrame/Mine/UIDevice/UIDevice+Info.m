@@ -1,12 +1,13 @@
 //
-//  YDeviceUtils.m
+//  UIDevice+Info.m
 //  YangFrame
 //
-//  Created by Yang Shichang on 13-10-26.
-//  Copyright (c) 2013年 Yang152412. All rights reserved.
+//  Created by 杨世昌 on 15/7/14.
+//  Copyright (c) 2015年 Yang152412. All rights reserved.
 //
 
-#import "DeviceUtils.h"
+#import "UIDevice+Info.h"
+
 #import <CommonCrypto/CommonDigest.h>
 #include <sys/sysctl.h>
 #include <netinet/in.h>
@@ -16,13 +17,12 @@
 static CGSize       g_screenSize = {0,0};
 static BOOL         g_isIphone5Simulator =NO;
 
-
-@implementation DeviceUtils
+@implementation UIDevice (Info)
 
 /* Return a string description of the UUID, such as "E621E1F8-C36C-495A-93FC-0C247A3E6E5F" */
 + (NSString*)vendorIdentifier
 {
-    if ([[DeviceUtils deviceOSVersion] floatValue] >= 6.0) {
+    if ([[UIDevice deviceOSVersion] floatValue] >= 6.0) {
         return UIDevice.currentDevice.identifierForVendor.UUIDString;
     }
     else{
@@ -85,7 +85,7 @@ static BOOL         g_isIphone5Simulator =NO;
     if (uniqueIdentifier == nil)
     {
         
-        NSString *macaddress = [DeviceUtils macaddress];
+        NSString *macaddress = [UIDevice macaddress];
         
         if(macaddress == nil || [macaddress length] == 0)
             return nil;
@@ -139,49 +139,49 @@ static BOOL         g_isIphone5Simulator =NO;
 
 + (NSString*)machineTypeMap
 {
-	NSString *platform = [DeviceUtils machineType];
-	if ([platform isEqualToString:@"iPhone1,1"]) return @"iPhone1-1";
-	if ([platform isEqualToString:@"iPhone1,2"]) return @"iPhone1-2";
-	if ([platform isEqualToString:@"iPhone2,1"]) return @"iPhone2-1";
-	if ([platform isEqualToString:@"iPhone3,1"]) return @"iPhone3-1";
-	if ([platform isEqualToString:@"iPhone4,1"]) return @"iPhone4-1";
+    NSString *platform = [UIDevice machineType];
+    if ([platform isEqualToString:@"iPhone1,1"]) return @"iPhone1-1";
+    if ([platform isEqualToString:@"iPhone1,2"]) return @"iPhone1-2";
+    if ([platform isEqualToString:@"iPhone2,1"]) return @"iPhone2-1";
+    if ([platform isEqualToString:@"iPhone3,1"]) return @"iPhone3-1";
+    if ([platform isEqualToString:@"iPhone4,1"]) return @"iPhone4-1";
     if ([platform isEqualToString:@"iPhone5,1"]) return @"iPhone5-1";
     
-	if ([platform isEqualToString:@"iPod1,1"])   return @"iPod1-1";
-	if ([platform isEqualToString:@"iPod2,1"])   return @"iPod2-1";
-	if ([platform isEqualToString:@"iPod3,1"])   return @"iPod3-1";
-	if ([platform isEqualToString:@"iPad1,1"])   return @"iPad1-1";
-	if ([platform isEqualToString:@"iPad2,1"])   return @"iPad2-1";
+    if ([platform isEqualToString:@"iPod1,1"])   return @"iPod1-1";
+    if ([platform isEqualToString:@"iPod2,1"])   return @"iPod2-1";
+    if ([platform isEqualToString:@"iPod3,1"])   return @"iPod3-1";
+    if ([platform isEqualToString:@"iPad1,1"])   return @"iPad1-1";
+    if ([platform isEqualToString:@"iPad2,1"])   return @"iPad2-1";
     
-	if ([platform hasPrefix:@"iPhone"]) return @"iPhone";
-	if ([platform hasPrefix:@"iPod"]) return @"iPod";
-	if ([platform hasPrefix:@"iPad"]) return @"iPad";
+    if ([platform hasPrefix:@"iPhone"]) return @"iPhone";
+    if ([platform hasPrefix:@"iPod"]) return @"iPod";
+    if ([platform hasPrefix:@"iPad"]) return @"iPad";
     
     if ([platform hasSuffix:@"86"] || [platform isEqual:@"x86_64"])
     {
         return @"Simulator";
     }
     
-	return nil;
+    return nil;
 }
 
 + (int)machineTypeInt
 {
-	NSString *platform = [DeviceUtils machineType];
-	if ([platform isEqualToString:@"iPhone1,1"]) return UIDevice1GiPhone;
-	if ([platform isEqualToString:@"iPhone1,2"]) return UIDevice3GiPhone;
-	if ([platform isEqualToString:@"iPhone2,1"]) return UIDevice3GSiPhone;
-	if ([platform isEqualToString:@"iPhone3,1"]) return UIDevice4GiPhone;
-	if ([platform isEqualToString:@"iPhone4,1"]) return UIDevice4GSiPhone;
+    NSString *platform = [UIDevice machineType];
+    if ([platform isEqualToString:@"iPhone1,1"]) return UIDevice1GiPhone;
+    if ([platform isEqualToString:@"iPhone1,2"]) return UIDevice3GiPhone;
+    if ([platform isEqualToString:@"iPhone2,1"]) return UIDevice3GSiPhone;
+    if ([platform isEqualToString:@"iPhone3,1"]) return UIDevice4GiPhone;
+    if ([platform isEqualToString:@"iPhone4,1"]) return UIDevice4GSiPhone;
     if ([platform isEqualToString:@"iPhone5,1"]) return UIDevice5iPhone;
-	if ([platform isEqualToString:@"iPod1,1"])   return UIDevice1GiPod;
-	if ([platform isEqualToString:@"iPod2,1"])   return UIDevice2GiPod;
-	if ([platform isEqualToString:@"iPod3,1"])   return UIDevice3GiPod;
-	if ([platform isEqualToString:@"iPad1,1"])   return UIDevice1GiPad;
-	if ([platform isEqualToString:@"iPad2,1"])   return UIDevice2GiPad;
-	if ([platform hasPrefix:@"iPhone"]) return UIDeviceUnknowniPhone;
-	if ([platform hasPrefix:@"iPod"]) return UIDeviceUnknowniPod;
-	if ([platform hasPrefix:@"iPad"]) return UIDeviceUnknowniPad;
+    if ([platform isEqualToString:@"iPod1,1"])   return UIDevice1GiPod;
+    if ([platform isEqualToString:@"iPod2,1"])   return UIDevice2GiPod;
+    if ([platform isEqualToString:@"iPod3,1"])   return UIDevice3GiPod;
+    if ([platform isEqualToString:@"iPad1,1"])   return UIDevice1GiPad;
+    if ([platform isEqualToString:@"iPad2,1"])   return UIDevice2GiPad;
+    if ([platform hasPrefix:@"iPhone"]) return UIDeviceUnknowniPhone;
+    if ([platform hasPrefix:@"iPod"]) return UIDeviceUnknowniPod;
+    if ([platform hasPrefix:@"iPad"]) return UIDeviceUnknowniPad;
     if ([platform hasSuffix:@"86"] || [platform isEqual:@"x86_64"])
     {
         if (g_isIphone5Simulator) {
@@ -189,7 +189,7 @@ static BOOL         g_isIphone5Simulator =NO;
         }else
             return UIDeviceSimulator;
     }
-	return UIDeviceUnknown;
+    return UIDeviceUnknown;
 }
 
 + (void)setIsIphone5Simulator:(BOOL) isOrNot
@@ -214,70 +214,70 @@ static BOOL         g_isIphone5Simulator =NO;
 
 + (NSString*)machineTypeString
 {
-	switch ([DeviceUtils machineTypeInt])
-	{
-		case UIDevice1GiPhone: return IPHONE_1G_NAMESTRING;
-		case UIDevice3GiPhone: return IPHONE_3G_NAMESTRING;
-		case UIDeviceUnknowniPhone: return IPHONE_UNKNOWN_NAMESTRING;
-		case UIDevice3GSiPhone: return IPHONE_3GS_NAMESTRING;
-		case UIDevice4GiPhone: return IPHONE_4G_NAMESTRING;
-		case UIDevice4GSiPhone: return IPHONE_4GS_NAMESTRING;
+    switch ([UIDevice machineTypeInt])
+    {
+        case UIDevice1GiPhone: return IPHONE_1G_NAMESTRING;
+        case UIDevice3GiPhone: return IPHONE_3G_NAMESTRING;
+        case UIDeviceUnknowniPhone: return IPHONE_UNKNOWN_NAMESTRING;
+        case UIDevice3GSiPhone: return IPHONE_3GS_NAMESTRING;
+        case UIDevice4GiPhone: return IPHONE_4G_NAMESTRING;
+        case UIDevice4GSiPhone: return IPHONE_4GS_NAMESTRING;
         case UIDevice5iPhone:   return IPHONE_5_NAMESTRING;
         case UIDeviceSimulator: return SIMULATOR_NAMESTRING;
-		case UIDevice1GiPod: return IPOD_1G_NAMESTRING;
-		case UIDevice2GiPod: return IPOD_2G_NAMESTRING;
-		case UIDevice3GiPod: return IPOD_3G_NAMESTRING;
-		case UIDevice1GiPad: return IPAD_1G_NAMESTRING;
-		case UIDevice2GiPad: return IPAD_2G_NAMESTRING;
-		case UIDeviceUnknowniPad: return IPAD_UNKNOWN_NAMESTRING;
-		case UIDeviceUnknowniPod: return IPOD_UNKNOWN_NAMESTRING;
+        case UIDevice1GiPod: return IPOD_1G_NAMESTRING;
+        case UIDevice2GiPod: return IPOD_2G_NAMESTRING;
+        case UIDevice3GiPod: return IPOD_3G_NAMESTRING;
+        case UIDevice1GiPad: return IPAD_1G_NAMESTRING;
+        case UIDevice2GiPad: return IPAD_2G_NAMESTRING;
+        case UIDeviceUnknowniPad: return IPAD_UNKNOWN_NAMESTRING;
+        case UIDeviceUnknowniPod: return IPOD_UNKNOWN_NAMESTRING;
             
-		default: return nil;
-	}
+        default: return nil;
+    }
 }
 
 + (int)deviceResolution{
-	switch ([DeviceUtils machineTypeInt])
-	{
-		case UIDevice1GiPhone: return UIDeviceScreen320X480;
-		case UIDevice3GiPhone: return UIDeviceScreen320X480;
-		case UIDeviceUnknowniPhone: return UIDeviceScreen320X480;
-		case UIDevice3GSiPhone: return UIDeviceScreen320X480;
-		case UIDevice4GiPhone: return UIDeviceScreen640X960;
-		case UIDevice4GSiPhone:	return UIDeviceScreen640X960;
-		case UIDevice1GiPod: return UIDeviceScreen320X480;
-		case UIDevice2GiPod: return UIDeviceScreen320X480;
-		case UIDevice3GiPod: return UIDeviceScreen640X960;
-		case UIDevice1GiPad: return UIDeviceScreen768X1024;
-		case UIDevice2GiPad: return UIDeviceScreen768X1024;
-		case UIDeviceUnknowniPad: return UIDeviceScreen768X1024;
-		case UIDeviceUnknowniPod: return UIDeviceScreen320X480;
-			
-		default: return UIDeviceScreen320X480;
-	}
+    switch ([UIDevice machineTypeInt])
+    {
+        case UIDevice1GiPhone: return UIDeviceScreen320X480;
+        case UIDevice3GiPhone: return UIDeviceScreen320X480;
+        case UIDeviceUnknowniPhone: return UIDeviceScreen320X480;
+        case UIDevice3GSiPhone: return UIDeviceScreen320X480;
+        case UIDevice4GiPhone: return UIDeviceScreen640X960;
+        case UIDevice4GSiPhone:	return UIDeviceScreen640X960;
+        case UIDevice1GiPod: return UIDeviceScreen320X480;
+        case UIDevice2GiPod: return UIDeviceScreen320X480;
+        case UIDevice3GiPod: return UIDeviceScreen640X960;
+        case UIDevice1GiPad: return UIDeviceScreen768X1024;
+        case UIDevice2GiPad: return UIDeviceScreen768X1024;
+        case UIDeviceUnknowniPad: return UIDeviceScreen768X1024;
+        case UIDeviceUnknowniPod: return UIDeviceScreen320X480;
+            
+        default: return UIDeviceScreen320X480;
+    }
     
 }
 
 + (int)platformCapabilities
 {
-	switch ([DeviceUtils machineTypeInt])
-	{
-		case UIDevice1GiPhone: return UIDeviceBuiltInSpeaker | UIDeviceBuiltInCamera | UIDeviceBuiltInMicrophone | UIDeviceSupportsExternalMicrophone | UIDeviceSupportsTelephony | UIDeviceSupportsVibration;
-		case UIDevice3GiPhone: return UIDeviceSupportsGPS | UIDeviceBuiltInSpeaker | UIDeviceBuiltInCamera | UIDeviceBuiltInMicrophone | UIDeviceSupportsExternalMicrophone | UIDeviceSupportsTelephony | UIDeviceSupportsVibration;
-		case UIDeviceUnknowniPhone: return UIDeviceBuiltInSpeaker | UIDeviceBuiltInCamera | UIDeviceBuiltInMicrophone | UIDeviceSupportsExternalMicrophone | UIDeviceSupportsTelephony | UIDeviceSupportsVibration;
+    switch ([UIDevice machineTypeInt])
+    {
+        case UIDevice1GiPhone: return UIDeviceBuiltInSpeaker | UIDeviceBuiltInCamera | UIDeviceBuiltInMicrophone | UIDeviceSupportsExternalMicrophone | UIDeviceSupportsTelephony | UIDeviceSupportsVibration;
+        case UIDevice3GiPhone: return UIDeviceSupportsGPS | UIDeviceBuiltInSpeaker | UIDeviceBuiltInCamera | UIDeviceBuiltInMicrophone | UIDeviceSupportsExternalMicrophone | UIDeviceSupportsTelephony | UIDeviceSupportsVibration;
+        case UIDeviceUnknowniPhone: return UIDeviceBuiltInSpeaker | UIDeviceBuiltInCamera | UIDeviceBuiltInMicrophone | UIDeviceSupportsExternalMicrophone | UIDeviceSupportsTelephony | UIDeviceSupportsVibration;
             
-		case UIDevice1GiPod: return 0;
-		case UIDevice2GiPod: return UIDeviceBuiltInSpeaker | UIDeviceBuiltInMicrophone | UIDeviceSupportsExternalMicrophone;
-		case UIDeviceUnknowniPod: return 0;
+        case UIDevice1GiPod: return 0;
+        case UIDevice2GiPod: return UIDeviceBuiltInSpeaker | UIDeviceBuiltInMicrophone | UIDeviceSupportsExternalMicrophone;
+        case UIDeviceUnknowniPod: return 0;
             
-		default: return 0;
-	}
+        default: return 0;
+    }
 }
 
 + (NSString*)deviceWidth
 {
     CGRect mainRect =  [UIScreen mainScreen].bounds;
-	CGFloat scale = [UIScreen mainScreen].scale;
+    CGFloat scale = [UIScreen mainScreen].scale;
     int width =(int) mainRect.size.width*scale;
     NSString* strWidth = [NSString stringWithFormat:@"%d",width];
     return strWidth;
@@ -286,7 +286,7 @@ static BOOL         g_isIphone5Simulator =NO;
 + (NSString*)deviceHeight
 {
     CGRect mainRect =  [UIScreen mainScreen].bounds;
-	CGFloat scale = [UIScreen mainScreen].scale;
+    CGFloat scale = [UIScreen mainScreen].scale;
     int height =(int) mainRect.size.height*scale;
     NSString* strHeight = [NSString stringWithFormat:@"%d",height];
     return strHeight;
@@ -334,5 +334,6 @@ static BOOL         g_isIphone5Simulator =NO;
     return isJailbroken;
 #endif
 }
+
 
 @end

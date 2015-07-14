@@ -58,7 +58,7 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
 // 判断string是否为00, 00表示JSON数据正常；
 #define Y_RESPOK(X) ([X intValue] == kNetRespOkValue)
 
-#define Y_ISRETINA [DeviceUtils isRetina]
+#define Y_ISRETINA [UIDevice isRetina]
 
 #define Y_ISIPHONE5  ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 1136), [[UIScreen mainScreen] currentMode].size) : NO)
 
@@ -75,12 +75,12 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
 
 #define Y_USERDEFAULT  [NSUserDefaults standardUserDefaults]
 
-#define Y_IOS_VERSION [[DeviceUtils deviceOSVersion] floatValue]
+#define Y_IOS_VERSION [[UIDevice deviceOSVersion] floatValue]
 
 #define Y_PROPERTY(X) [YUtils propertyArray:X]
 
 // 判断string是否为空 nil 或者 @"" 或者 @""；
-#define Y_IS_NIL(X)  [YUtils isEmpty:X]
+#define Y_IS_NIL(X)  [NSString isEmptyString:X]
 
 #define Y_URL(X)  [YUtils urlWithString:X]
 

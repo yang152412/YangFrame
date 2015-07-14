@@ -1,13 +1,12 @@
 //
-//  YDeviceUtils.h
+//  UIDevice+Info.h
 //  YangFrame
 //
-//  Created by Yang Shichang on 13-10-26.
-//  Copyright (c) 2013年 Yang152412. All rights reserved.
+//  Created by 杨世昌 on 15/7/14.
+//  Copyright (c) 2015年 Yang152412. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-
+#import <UIKit/UIKit.h>
 
 #define IPHONE_1G_NAMESTRING @"iPhone 1G"
 #define IPHONE_3G_NAMESTRING @"iPhone 3G"
@@ -27,47 +26,44 @@
 #define IPAD_UNKNOWN_NAMESTRING @"Unknown iPad"
 
 typedef enum {
-	UIDeviceUnknown,
-	UIDevice1GiPhone,
-	UIDevice1GiPod,
-	UIDevice1GiPad,
-	UIDevice3GiPhone,
-	UIDevice2GiPod,
-	UIDevice2GiPad,
-	UIDevice3GSiPhone,
-	UIDevice3GiPod,
-	UIDevice4GiPhone,
-	UIDevice4GSiPhone,
+    UIDeviceUnknown,
+    UIDevice1GiPhone,
+    UIDevice1GiPod,
+    UIDevice1GiPad,
+    UIDevice3GiPhone,
+    UIDevice2GiPod,
+    UIDevice2GiPad,
+    UIDevice3GSiPhone,
+    UIDevice3GiPod,
+    UIDevice4GiPhone,
+    UIDevice4GSiPhone,
     
     UIDevice5iPhone,
     UIDeviceSimulator,
     UIDeviceiPhone5Simulator,
     
-	UIDeviceUnknowniPhone,
-	UIDeviceUnknowniPad,
-	UIDeviceUnknowniPod
+    UIDeviceUnknowniPhone,
+    UIDeviceUnknowniPad,
+    UIDeviceUnknowniPod
 } UIDevicePlatform;
 
 enum  {
-	UIDeviceScreen320X480,
-	UIDeviceScreen640X960,
-	UIDeviceScreen768X1024
+    UIDeviceScreen320X480,
+    UIDeviceScreen640X960,
+    UIDeviceScreen768X1024
 };
 
 enum {
-	UIDeviceSupportsGPS	= 1 << 0,
-	UIDeviceBuiltInSpeaker = 1 << 1,
-	UIDeviceBuiltInCamera = 1 << 2,
-	UIDeviceBuiltInMicrophone = 1 << 3,
-	UIDeviceSupportsExternalMicrophone = 1 << 4,
-	UIDeviceSupportsTelephony = 1 << 5,
-	UIDeviceSupportsVibration = 1 << 6
+    UIDeviceSupportsGPS	= 1 << 0,
+    UIDeviceBuiltInSpeaker = 1 << 1,
+    UIDeviceBuiltInCamera = 1 << 2,
+    UIDeviceBuiltInMicrophone = 1 << 3,
+    UIDeviceSupportsExternalMicrophone = 1 << 4,
+    UIDeviceSupportsTelephony = 1 << 5,
+    UIDeviceSupportsVibration = 1 << 6
 };
 
-@interface DeviceUtils : NSObject
-{
-    
-}
+@interface UIDevice (Info)
 
 // macaddress已失效! 在iOS7中所有的机器返回02:00:00:00:00:00
 // Return a string description of the UUID, such as "E621E1F8-C36C-495A-93FC-0C247A3E6E5F"
@@ -104,5 +100,7 @@ enum {
 #pragma mark -
 #pragma mark 判断是否越狱
 + (BOOL)isJailbroken;
+
+
 
 @end

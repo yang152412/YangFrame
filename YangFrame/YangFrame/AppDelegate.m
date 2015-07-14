@@ -27,6 +27,7 @@
     NavigationViewController *nav = [[NavigationViewController alloc]  initWithRootViewController:self.tabBarController];
     [nav setNavigationBarHidden:YES animated:NO];
     self.navController = nav;
+    self.window.rootViewController = nav;
     
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];

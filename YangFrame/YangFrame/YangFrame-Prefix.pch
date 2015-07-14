@@ -19,7 +19,7 @@
 #import "JSONKit.h"
 #import "JSONModel.h"
 #import "DDLog.h"
-#import "DeviceUtils.h"
+#import "UIDevice+Info.h"
 #import "YConstant.h"
 #import "AppDelegate.h"
 
@@ -31,5 +31,5 @@
 #import "YBaseButton.h"
 #import "YBaseTextField.h"
 
-
+#import "NSString+Util.h"
 #endif

@@ -23,6 +23,7 @@
 		225313D41B54AE2F0065304E /* UIPlaceHolderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 225313D31B54AE2F0065304E /* UIPlaceHolderTextView.m */; };
 		225313D71B54B2B20065304E /* NSString+Luhn.m in Sources */ = {isa = PBXBuildFile; fileRef = 225313D61B54B2B20065304E /* NSString+Luhn.m */; };
 		225313DB1B54B4100065304E /* CharCountInputTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 225313DA1B54B4100065304E /* CharCountInputTextView.m */; };
+		225313DE1B54B4C60065304E /* UIDevice+Info.m in Sources */ = {isa = PBXBuildFile; fileRef = 225313DD1B54B4C60065304E /* UIDevice+Info.m */; };
 		22B23BB31B2FCC5A0070C1CB /* UIDevice+IPAddress.m in Sources */ = {isa = PBXBuildFile; fileRef = 22B23BB21B2FCC5A0070C1CB /* UIDevice+IPAddress.m */; };
 		22BD202F1AB02ACE0022D987 /* UIView+Util.m in Sources */ = {isa = PBXBuildFile; fileRef = 22BD202E1AB02ACE0022D987 /* UIView+Util.m */; };
 		22BD20331AB02BED0022D987 /* NSString+Util.m in Sources */ = {isa = PBXBuildFile; fileRef = 22BD20321AB02BED0022D987 /* NSString+Util.m */; };
@@ -80,7 +81,6 @@
 		AC79CB23181BEE0300DBE03E /* UIScrollView+SVInfiniteScrolling.m in Sources */ = {isa = PBXBuildFile; fileRef = AC79CB03181BEE0300DBE03E /* UIScrollView+SVInfiniteScrolling.m */; };
 		AC79CB24181BEE0300DBE03E /* UIScrollView+SVPullToRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = AC79CB05181BEE0300DBE03E /* UIScrollView+SVPullToRefresh.m */; };
 		AC79CB26181BEE8100DBE03E /* YDefaultLocalize.plist in Resources */ = {isa = PBXBuildFile; fileRef = AC79CB25181BEE8100DBE03E /* YDefaultLocalize.plist */; };
-		AC79CB35181BF4EB00DBE03E /* DeviceUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = AC79CB34181BF4EB00DBE03E /* DeviceUtils.m */; };
 		AC79CB38181BF50500DBE03E /* YUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = AC79CB37181BF50500DBE03E /* YUtils.m */; };
 		AC79CB3B181BFC4100DBE03E /* YViewUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = AC79CB3A181BFC4100DBE03E /* YViewUtils.m */; };
 		AC79CB40181C016D00DBE03E /* YExUIImage.m in Sources */ = {isa = PBXBuildFile; fileRef = AC79CB3D181C016D00DBE03E /* YExUIImage.m */; };
@@ -139,6 +139,8 @@
 		225313D61B54B2B20065304E /* NSString+Luhn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Luhn.m"; sourceTree = "<group>"; };
 		225313D91B54B4100065304E /* CharCountInputTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CharCountInputTextView.h; sourceTree = "<group>"; };
 		225313DA1B54B4100065304E /* CharCountInputTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CharCountInputTextView.m; sourceTree = "<group>"; };
+		225313DC1B54B4C60065304E /* UIDevice+Info.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+Info.h"; sourceTree = "<group>"; };
+		225313DD1B54B4C60065304E /* UIDevice+Info.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+Info.m"; sourceTree = "<group>"; };
 		22B23BB11B2FCC5A0070C1CB /* UIDevice+IPAddress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+IPAddress.h"; sourceTree = "<group>"; };
 		22B23BB21B2FCC5A0070C1CB /* UIDevice+IPAddress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+IPAddress.m"; sourceTree = "<group>"; };
 		22BD202D1AB02ACE0022D987 /* UIView+Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Util.h"; sourceTree = "<group>"; };
@@ -254,8 +256,6 @@
 		AC79CB2F181BEED700DBE03E /* YConstURL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YConstURL.h; sourceTree = "<group>"; };
 		AC79CB30181BEED700DBE03E /* YConstView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YConstView.h; sourceTree = "<group>"; };
 		AC79CB31181BF2E500DBE03E /* YConstDebug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YConstDebug.h; sourceTree = "<group>"; };
-		AC79CB33181BF4EB00DBE03E /* DeviceUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceUtils.h; sourceTree = "<group>"; };
-		AC79CB34181BF4EB00DBE03E /* DeviceUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceUtils.m; sourceTree = "<group>"; };
 		AC79CB36181BF50500DBE03E /* YUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YUtils.h; sourceTree = "<group>"; };
 		AC79CB37181BF50500DBE03E /* YUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YUtils.m; sourceTree = "<group>"; };
 		AC79CB39181BFC4100DBE03E /* YViewUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YViewUtils.h; sourceTree = "<group>"; };
@@ -428,6 +428,8 @@
 			children = (
 				22B23BB11B2FCC5A0070C1CB /* UIDevice+IPAddress.h */,
 				22B23BB21B2FCC5A0070C1CB /* UIDevice+IPAddress.m */,
+				225313DC1B54B4C60065304E /* UIDevice+Info.h */,
+				225313DD1B54B4C60065304E /* UIDevice+Info.m */,
 			);
 			path = UIDevice;
 			sourceTree = "<group>";
@@ -844,8 +846,6 @@
 		AC79CB32181BF49E00DBE03E /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				AC79CB33181BF4EB00DBE03E /* DeviceUtils.h */,
-				AC79CB34181BF4EB00DBE03E /* DeviceUtils.m */,
 				AC79CB36181BF50500DBE03E /* YUtils.h */,
 				AC79CB37181BF50500DBE03E /* YUtils.m */,
 				AC79CB39181BFC4100DBE03E /* YViewUtils.h */,
@@ -1030,6 +1030,7 @@
 				AC79CB4B181CDEC100DBE03E /* YBaseButton.m in Sources */,
 				AC79CB45181CDD1700DBE03E /* BaseViewController.m in Sources */,
 				2201B2581A78E0500080E78F /* YJTabBarItem.m in Sources */,
+				225313DE1B54B4C60065304E /* UIDevice+Info.m in Sources */,
 				AC79CB09181BEE0300DBE03E /* JSONModelArray.m in Sources */,
 				AC79CB0F181BEE0300DBE03E /* JSONModel+networking.m in Sources */,
 				22EA81B51B44DE3700B56BB5 /* UIColor+MLColorAdditions.m in Sources */,
@@ -1049,7 +1050,6 @@
 				AC79CB1E181BEE0300DBE03E /* UIAlertView+MKNetworkKitAdditions.m in Sources */,
 				22BD202F1AB02ACE0022D987 /* UIView+Util.m in Sources */,
 				AC79CB08181BEE0300DBE03E /* JSONModel.m in Sources */,
-				AC79CB35181BF4EB00DBE03E /* DeviceUtils.m in Sources */,
 				22EA81BC1B44E1C600B56BB5 /* UILabel+ContentSize.m in Sources */,
 				AC7D2B72181E9D22004AD9F7 /* YNetEngine.m in Sources */,
 				AC79CB12181BEE0300DBE03E /* DDAbstractDatabaseLogger.m in Sources */,
