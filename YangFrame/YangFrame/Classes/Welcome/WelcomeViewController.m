@@ -33,9 +33,23 @@
     UIButton *button = [[UIButton alloc] init];
     button.frame = CGRectMake(15, 150, 280, 88);
     button.backgroundColor = [UIColor redColor];
-//    [button setTitle:@"确定" forState:UIControlStateNormal];
+//    [button setTitle:@"测试" forState:UIControlStateNormal];
 //    [button setImage:[UIImage imageNamed:@"settings"] forState:UIControlStateNormal];
-    [button setImage:[UIImage imageNamed:@"settings"] title:@"确定" titlePosition: UIViewContentModeLeft additionalSpacing:15 state:UIControlStateNormal];
+//    button.titleEdgeInsets = UIEdgeInsetsMake(0, -60, 0, 0);
+//    button.imageEdgeInsets = UIEdgeInsetsMake(0, 0, 0, 0);
+    
+    [button setImage:[UIImage imageNamed:@"settings"] title:@"测试" titlePosition: UIViewContentModeRight additionalSpacing:10 state:UIControlStateNormal];
+    [self.view addSubview:button];
+    
+    
+    
+    
+    button = [[UIButton alloc] init];
+    button.frame = CGRectMake(15, 240, 280, 88);
+    button.backgroundColor = [UIColor redColor];
+    [button setTitle:@"测试" forState:UIControlStateNormal];
+    [button setImage:[UIImage imageNamed:@"settings"] forState:UIControlStateNormal];
+//    [button setImage:[UIImage imageNamed:@"settings"] title:@"测试" titlePosition: UIViewContentModeLeft additionalSpacing:0 state:UIControlStateNormal];
     [self.view addSubview:button];
 }
 

@@ -32,20 +32,21 @@
     UIEdgeInsets titleInsets,imageInsets;
     switch (position) {
         case UIViewContentModeTop:
-            titleInsets = UIEdgeInsetsMake(-(imageSize.size.height + titleSize.height + spacing), -(imageSize.size.width), 0,  0);
-            imageInsets = UIEdgeInsetsMake(0,  0,  0, -titleSize.width);
+            titleInsets = UIEdgeInsetsMake(-(imageSize.size.height + spacing), -(imageSize.size.width), 0,  0);
+            imageInsets = UIEdgeInsetsMake(0,  0,  -(titleSize.height + spacing), -titleSize.width);
             break;
         case UIViewContentModeBottom:
-            titleInsets = UIEdgeInsetsMake((imageSize.size.height + titleSize.height + spacing), -(imageSize.size.width), 0,  0);
-            imageInsets = UIEdgeInsetsMake(0, 0,  0, -titleSize.width);
+            titleInsets = UIEdgeInsetsMake((imageSize.size.height + spacing), -(imageSize.size.width), 0,  0);
+            imageInsets = UIEdgeInsetsMake(0, 0,  (titleSize.height + spacing), -titleSize.width);
             break;
         case UIViewContentModeLeft:
-            titleInsets = UIEdgeInsetsMake(0, -(imageSize.size.width * 2), 0,  0);
-            imageInsets = UIEdgeInsetsMake(0,  0,  0, -(titleSize.width * 2 + spacing));
+            titleInsets = UIEdgeInsetsMake(0, -(imageSize.size.width*2 +spacing), 0,  0);
+            imageInsets = UIEdgeInsetsMake(0, 0,  0, -(titleSize.width*2 + spacing));
+            
             break;
         case UIViewContentModeRight:
             titleInsets = UIEdgeInsetsMake(0, 0, 0,  -spacing);
-            imageInsets = UIEdgeInsetsMake(0,  0,  0, 0);
+            imageInsets = UIEdgeInsetsMake(0,  -spacing,  0, 0);
             break;
         default:
             titleInsets = UIEdgeInsetsMake(0, 0, 0,  0);
