@@ -24,6 +24,7 @@
 		225313D71B54B2B20065304E /* NSString+Luhn.m in Sources */ = {isa = PBXBuildFile; fileRef = 225313D61B54B2B20065304E /* NSString+Luhn.m */; };
 		225313DB1B54B4100065304E /* CharCountInputTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 225313DA1B54B4100065304E /* CharCountInputTextView.m */; };
 		225313DE1B54B4C60065304E /* UIDevice+Info.m in Sources */ = {isa = PBXBuildFile; fileRef = 225313DD1B54B4C60065304E /* UIDevice+Info.m */; };
+		225313E11B54B7880065304E /* NSString+ContentSize.m in Sources */ = {isa = PBXBuildFile; fileRef = 225313E01B54B7880065304E /* NSString+ContentSize.m */; };
 		22B23BB31B2FCC5A0070C1CB /* UIDevice+IPAddress.m in Sources */ = {isa = PBXBuildFile; fileRef = 22B23BB21B2FCC5A0070C1CB /* UIDevice+IPAddress.m */; };
 		22BD202F1AB02ACE0022D987 /* UIView+Util.m in Sources */ = {isa = PBXBuildFile; fileRef = 22BD202E1AB02ACE0022D987 /* UIView+Util.m */; };
 		22BD20331AB02BED0022D987 /* NSString+Util.m in Sources */ = {isa = PBXBuildFile; fileRef = 22BD20321AB02BED0022D987 /* NSString+Util.m */; };
@@ -141,6 +142,8 @@
 		225313DA1B54B4100065304E /* CharCountInputTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CharCountInputTextView.m; sourceTree = "<group>"; };
 		225313DC1B54B4C60065304E /* UIDevice+Info.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+Info.h"; sourceTree = "<group>"; };
 		225313DD1B54B4C60065304E /* UIDevice+Info.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+Info.m"; sourceTree = "<group>"; };
+		225313DF1B54B7880065304E /* NSString+ContentSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+ContentSize.h"; sourceTree = "<group>"; };
+		225313E01B54B7880065304E /* NSString+ContentSize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+ContentSize.m"; sourceTree = "<group>"; };
 		22B23BB11B2FCC5A0070C1CB /* UIDevice+IPAddress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+IPAddress.h"; sourceTree = "<group>"; };
 		22B23BB21B2FCC5A0070C1CB /* UIDevice+IPAddress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+IPAddress.m"; sourceTree = "<group>"; };
 		22BD202D1AB02ACE0022D987 /* UIView+Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Util.h"; sourceTree = "<group>"; };
@@ -452,6 +455,8 @@
 				22BD203D1AB02F250022D987 /* NSString+PJR.m */,
 				225313D51B54B2B20065304E /* NSString+Luhn.h */,
 				225313D61B54B2B20065304E /* NSString+Luhn.m */,
+				225313DF1B54B7880065304E /* NSString+ContentSize.h */,
+				225313E01B54B7880065304E /* NSString+ContentSize.m */,
 			);
 			path = YJNSString;
 			sourceTree = "<group>";
@@ -1046,6 +1051,7 @@
 				AC79CB16181BEE0300DBE03E /* DDTTYLogger.m in Sources */,
 				AC79CB41181C016D00DBE03E /* YExUIView.m in Sources */,
 				AC79CB0E181BEE0300DBE03E /* JSONHTTPClient.m in Sources */,
+				225313E11B54B7880065304E /* NSString+ContentSize.m in Sources */,
 				22BD203E1AB02F250022D987 /* NSString+PJR.m in Sources */,
 				AC79CB1E181BEE0300DBE03E /* UIAlertView+MKNetworkKitAdditions.m in Sources */,
 				22BD202F1AB02ACE0022D987 /* UIView+Util.m in Sources */,

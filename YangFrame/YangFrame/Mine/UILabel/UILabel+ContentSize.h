@@ -13,6 +13,4 @@
 - (CGSize)contentSize;
 - (CGSize)adjustContentSizeToSize:(CGSize)size;
 
-+ (CGSize)contentSizeForString:(NSString *)string font:(UIFont *)font boundingSize:(CGSize)size lineBreakMode:(NSLineBreakMode)lineBreakMode ;
-
 @end
