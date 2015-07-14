@@ -46,7 +46,7 @@
             break;
         case UIViewContentModeRight:
             titleInsets = UIEdgeInsetsMake(0, 0, 0,  -spacing);
-            imageInsets = UIEdgeInsetsMake(0,  -spacing,  0, 0);
+            imageInsets = UIEdgeInsetsMake(0, -spacing,  0, 0);
             break;
         default:
             titleInsets = UIEdgeInsetsMake(0, 0, 0,  0);
