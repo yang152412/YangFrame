@@ -14,8 +14,6 @@
 
 + (NSArray*)localizedArrayWithKey:(NSString*)key;
 
-//从字符串生成UIColor
-+ (UIColor*)colorWithHexString:(NSString*)str;
 
 /* fileName 示例 test/hello/test.txt */
 + (void)writeFile:(NSString*)fileName data:(NSData*)data append:(BOOL)append;
@@ -23,9 +21,6 @@
 + (NSData*)readFile:(NSString*)fileName;
 
 + (void)removeFile:(NSString*)fileName;
-
-+ (BOOL)isEmpty:(NSString*)value;
-
 
 #pragma mark - //  沙盒目录
 - (NSString *)dataFilePath:(NSString *)fileName;
@@ -76,10 +71,7 @@
 + (NSString *)convertMoneyFormat:(NSString *)moneyString;
 + (NSString *)formatCardNumber:(NSString *)cardNumber;
 
-#pragma mark - Luhn算法验证信用卡卡号是否有效
-+ (BOOL)luhnCheck:(NSString *)stringToTest;
-#pragma mark - 信用卡 卡号是否合法,里面包含了 Luhn 算法校验
-+ (BOOL)isCreditCardLegal:(NSString *)cardNum;
+
 
 #pragma mark - 清除本地登录状态
 + (void)clearLoginStatus;

@@ -23,4 +23,8 @@
 
 + (UIColor *) colorWithHex:(uint) hex alpha:(CGFloat)alpha;
 
+
+//从字符串生成UIColor
+//+ (UIColor*)colorWithHexString:(NSString*)str;
+
 @end

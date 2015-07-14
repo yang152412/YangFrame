@@ -10,40 +10,7 @@
 #import <sys/utsname.h>
 #import <objc/runtime.h>
 #import "SFHFKeychainUtils.h"
-
-// 分割字符串 4个一组
-static inline NSArray* componentsSeparatedByCreditCardLength(NSString* string)
-{
-    NSMutableArray* array = [NSMutableArray array];
-    NSInteger bLen = string.length / 4;
-    NSInteger mod = string.length % 4;
-    NSRange r = NSMakeRange(0, 4);
-    for (NSInteger index = 0; index < bLen; index++) {
-        [array addObject:[string substringWithRange:r]];
-        r.location +=4;
-    }
-    [array addObject:[string substringWithRange:NSMakeRange(r.location, mod)]];
-    return [NSArray arrayWithArray:array];
-}
-
-// 清楚 信用卡格式
-static inline NSString* cleanNumber(NSString *string)
-{
-	return [string stringByReplacingOccurrencesOfString:@" " withString:@""];
-}
-
-//  格式化 信用卡号
-static inline NSString* formatCreditCardNumber(NSString* string)
-{
-    // 清楚 string 前后空格
-    NSCharacterSet* set = [NSCharacterSet whitespaceCharacterSet];
-    if (string.length < 5) {
-        return [string stringByTrimmingCharactersInSet:set];
-    }
-    NSArray* array = componentsSeparatedByCreditCardLength(cleanNumber(string));
-    string =[array componentsJoinedByString:@" "];
-    return  [string stringByTrimmingCharactersInSet:set];
-}
+#import "NSString+Util.h"
 
 @implementation YUtils
 
@@ -75,40 +42,6 @@ static id localDict = nil;
         result = [localDict objectForKey:key];
     }
 	return result;
-}
-
-#pragma mark -
-#pragma mark 从字符串生成UIColor
-
-
-+ (UIColor*)colorWithHexString: (NSString *) str
-{
-    NSString *tmp = [[str stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] uppercaseString];
-    
-    if ([tmp length] < 8){
-        DDERROR(@"colorWithHexString len < 8: %@",str);
-        return nil;
-    }
-    
-    if ([tmp hasPrefix:@"0X"]){
-        tmp = [tmp substringFromIndex:2];
-        
-    }
-    if ([tmp hasPrefix:@"#"]){
-        tmp = [tmp substringFromIndex:1];
-    }
-    
-    if ([tmp length] != 8){
-        DDERROR(@"colorWithHexString len < 8: %@",str);
-        return nil;
-    }
-    
-    unsigned long color = strtoul([tmp UTF8String],0,16);
-    float a = ((float)((color & 0xFF000000) >> 24))/255.0;
-    float r = ((float)((color & 0xFF0000) >> 16))/255.0;
-    float g = ((float)((color & 0xFF00) >> 8))/255.0;
-    float b = ((float)(color & 0xFF))/255.0;
-    return [UIColor colorWithRed:r green:g blue:b alpha:a];
 }
 
 #pragma mark -
@@ -260,22 +193,12 @@ static id localDict = nil;
     
 }
 
-
-
-#pragma mark -
-#pragma mark 判断字符串是否为空（nil和length为0都是空）
-
-+ (BOOL)isEmpty:(NSString *)value
-{
-    return  (nil == value || ([value length] == 0) || [[value stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] isEqualToString:@""]);
-}
-
 #pragma mark -
 #pragma mark 从String创建URL
 + (NSURL*)urlWithString:(NSString *)value
 {
     NSURL* url = nil;
-    if (![self isEmpty:value]) {
+    if (![NSString isEmptyString:value]) {
         url = [NSURL URLWithString:value];
     }
     return url;
@@ -420,66 +343,11 @@ static id localDict = nil;
     return [formatMoneyString stringByAppendingString:@"元"];
 }
 
-#pragma mark - Luhn算法验证信用卡卡号是否有效
-/* luhn 算法 http://www.pbc.gov.cn/rhwg/20001801f102.htm
- LUHN算法，主要用来计算信用卡等证件号码的合法性。
- 1、从卡号最后一位数字开始,偶数位乘以2,如果乘以2的结果是两位数，将两个位上数字相加保存。
- 2、把所有数字相加,得到总和。
- 3、如果信用卡号码是合法的，总和可以被10整除。
- */
-+ (NSMutableArray*)charArrayFromString:(NSString *)string {
-    NSMutableArray *characters = [[NSMutableArray alloc] initWithCapacity:[string length]];
-    for (int i=0; i < [string length]; i++) {
-        NSString *ichar  = [NSString stringWithFormat:@"%c", [string characterAtIndex:i]];
-        [characters addObject:ichar];
-    }
-    return characters;
-}
-+ (BOOL)luhnCheck:(NSString *)stringToTest {
-    NSMutableArray *stringAsChars = [YUtils charArrayFromString:stringToTest];
-    BOOL isOdd = YES;
-    int oddSum = 0;
-    int evenSum = 0;
-    for (int i = [stringToTest length] - 1; i >= 0; i--) {
-        int digit = [(NSString *)[stringAsChars objectAtIndex:i] intValue];
-        if (isOdd) {
-            oddSum += digit;
-        }
-        else {
-            //            evenSum += digit/5 + (2*digit) % 10;
-            // 上面一句话分为下面三句话
-            digit = digit*2;
-            int even = digit / 10 + digit % 10;
-            evenSum = evenSum + even;
-        }
-        isOdd = !isOdd;
-    }
-    return ((oddSum + evenSum) % 10 == 0);
-}
-
-+ (BOOL)isCreditCardLegal:(NSString *)cardNum
-{
-    BOOL isLegal = NO;
-    BOOL isMatch  = Y_REGEXP(cardNum, kCreditCardPredicate);
-    if (isMatch) {
-        // luhn 算法 ，校验 卡号 最后一位 是否合法
-        BOOL isLuhnOk = [YUtils luhnCheck:cardNum];
-        if (isLuhnOk) {
-            isLegal = YES;
-        }
-    }
-    return isLegal;
-}
 
 #pragma mark - 清除本地登录状态
 
 + (void)clearLoginStatus
 {
-}
-
-+ (NSString*)getNormalString:(NSString*)string{   // 将4个一空格的卡号转为正常的卡号
-    return cleanNumber(string);
-    //   return [cardID stringByReplacingOccurrencesOfString:@" " withString:@""];
 }
 
 + (UIView *)getTableViewLoadMoreView{

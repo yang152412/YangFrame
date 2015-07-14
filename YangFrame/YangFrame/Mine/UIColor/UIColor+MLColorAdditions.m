@@ -63,4 +63,39 @@
     return [UIColor colorWithRed:red/255.0f green:green/255.0f blue:blue/255.0f alpha:alpha];
 }
 
+#pragma mark -
+#pragma mark 从字符串生成UIColor
+
+/*
++ (UIColor*)colorWithHexString: (NSString *) str
+{
+    NSString *tmp = [[str stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] uppercaseString];
+    
+    if ([tmp length] < 8){
+        DDERROR(@"colorWithHexString len < 8: %@",str);
+        return nil;
+    }
+    
+    if ([tmp hasPrefix:@"0X"]){
+        tmp = [tmp substringFromIndex:2];
+        
+    }
+    if ([tmp hasPrefix:@"#"]){
+        tmp = [tmp substringFromIndex:1];
+    }
+    
+    if ([tmp length] != 8){
+        DDERROR(@"colorWithHexString len < 8: %@",str);
+        return nil;
+    }
+    
+    unsigned long color = strtoul([tmp UTF8String],0,16);
+    float a = ((float)((color & 0xFF000000) >> 24))/255.0;
+    float r = ((float)((color & 0xFF0000) >> 16))/255.0;
+    float g = ((float)((color & 0xFF00) >> 8))/255.0;
+    float b = ((float)(color & 0xFF))/255.0;
+    return [UIColor colorWithRed:r green:g blue:b alpha:a];
+}
+*/
+
 @end
