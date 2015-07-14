@@ -19,6 +19,7 @@
 		2201B26E1A78E2C20080E78F /* cus_actionSheet_destructiveBtn_h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2201B2651A78E2C20080E78F /* cus_actionSheet_destructiveBtn_h@2x.png */; };
 		2201B26F1A78E2C20080E78F /* cus_actionSheet_otherBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2201B2661A78E2C20080E78F /* cus_actionSheet_otherBtn@2x.png */; };
 		2201B2701A78E2C20080E78F /* cus_actionSheet_otherBtn_h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2201B2671A78E2C20080E78F /* cus_actionSheet_otherBtn_h@2x.png */; };
+		225313D01B54AD290065304E /* RatingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 225313CF1B54AD290065304E /* RatingView.m */; };
 		22B23BB31B2FCC5A0070C1CB /* UIDevice+IPAddress.m in Sources */ = {isa = PBXBuildFile; fileRef = 22B23BB21B2FCC5A0070C1CB /* UIDevice+IPAddress.m */; };
 		22BD202F1AB02ACE0022D987 /* UIView+Util.m in Sources */ = {isa = PBXBuildFile; fileRef = 22BD202E1AB02ACE0022D987 /* UIView+Util.m */; };
 		22BD20331AB02BED0022D987 /* NSString+Util.m in Sources */ = {isa = PBXBuildFile; fileRef = 22BD20321AB02BED0022D987 /* NSString+Util.m */; };
@@ -127,6 +128,8 @@
 		2201B2651A78E2C20080E78F /* cus_actionSheet_destructiveBtn_h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cus_actionSheet_destructiveBtn_h@2x.png"; sourceTree = "<group>"; };
 		2201B2661A78E2C20080E78F /* cus_actionSheet_otherBtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cus_actionSheet_otherBtn@2x.png"; sourceTree = "<group>"; };
 		2201B2671A78E2C20080E78F /* cus_actionSheet_otherBtn_h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cus_actionSheet_otherBtn_h@2x.png"; sourceTree = "<group>"; };
+		225313CE1B54AD290065304E /* RatingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RatingView.h; sourceTree = "<group>"; };
+		225313CF1B54AD290065304E /* RatingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RatingView.m; sourceTree = "<group>"; };
 		22B23BB11B2FCC5A0070C1CB /* UIDevice+IPAddress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+IPAddress.h"; sourceTree = "<group>"; };
 		22B23BB21B2FCC5A0070C1CB /* UIDevice+IPAddress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+IPAddress.m"; sourceTree = "<group>"; };
 		22BD202D1AB02ACE0022D987 /* UIView+Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Util.h"; sourceTree = "<group>"; };
@@ -331,6 +334,7 @@
 				22BD202C1AB02AC40022D987 /* YJUIView */,
 				22BD20301AB02BED0022D987 /* YJNSString */,
 				22BD20341AB02C400022D987 /* YJTextField */,
+				225313CD1B54AD160065304E /* RatingView */,
 			);
 			path = Mine;
 			sourceTree = "<group>";
@@ -380,6 +384,15 @@
 				2201B2671A78E2C20080E78F /* cus_actionSheet_otherBtn_h@2x.png */,
 			);
 			path = YJCustomActionSheetResource;
+			sourceTree = "<group>";
+		};
+		225313CD1B54AD160065304E /* RatingView */ = {
+			isa = PBXGroup;
+			children = (
+				225313CE1B54AD290065304E /* RatingView.h */,
+				225313CF1B54AD290065304E /* RatingView.m */,
+			);
+			path = RatingView;
 			sourceTree = "<group>";
 		};
 		22B23BB01B2FCC5A0070C1CB /* UIDevice */ = {
@@ -1007,6 +1020,7 @@
 				AC7D2B72181E9D22004AD9F7 /* YNetEngine.m in Sources */,
 				AC79CB12181BEE0300DBE03E /* DDAbstractDatabaseLogger.m in Sources */,
 				AC79CB1B181BEE0300DBE03E /* NSDate+RFC1123.m in Sources */,
+				225313D01B54AD290065304E /* RatingView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
