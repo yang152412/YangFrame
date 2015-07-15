@@ -30,7 +30,7 @@
     BOOL isOdd = YES;
     int oddSum = 0;
     int evenSum = 0;
-    for (int i = [stringToTest length] - 1; i >= 0; i--) {
+    for (NSInteger i = [stringToTest length] - 1; i >= 0; i--) {
         int digit = [(NSString *)[stringAsChars objectAtIndex:i] intValue];
         if (isOdd) {
             oddSum += digit;

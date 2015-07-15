@@ -23,12 +23,12 @@
         NSMutableString *cardNo = [[NSMutableString alloc]initWithString:source];
         NSInteger currentIndex = range.location+string.length; // 修改后的位置
         NSString *sub = [cardNo substringToIndex:currentIndex]; // 修改后的 光标之前的字符串，没有格式化
-        int oldSpaceCount = [sub spaceCount];  //  格式化之前的 空格 的个数
+        NSInteger oldSpaceCount = [sub spaceCount];  //  格式化之前的 空格 的个数
         NSString *normalSub = [NSString getNoSpaceString:sub];   // 修改的字符串 去掉所有的空格
         NSString *formatSub = [NSString seperateString:normalSub seperator:seperator]; //  重新格式化 光标之前的字符串
-        int newSpaceCount = [formatSub spaceCount];    // 计算 新空格的个数
+        NSInteger newSpaceCount = [formatSub spaceCount];    // 计算 新空格的个数
         
-        int count = newSpaceCount - oldSpaceCount; // 计算空格差
+        NSInteger count = newSpaceCount - oldSpaceCount; // 计算空格差
         
         // 从左边计算 偏移量，移动光标
         UITextPosition *startPos = [textInput positionFromPosition:textInput.beginningOfDocument offset:currentIndex+count];

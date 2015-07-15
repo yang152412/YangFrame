@@ -62,19 +62,19 @@
     
     if (text.length < self.minInputCount) {
         _textViewRemainCharCountLabel.textColor = self.charCountLabelLessThanMinTextColor;
-        _textViewRemainCharCountLabel.text = [NSString stringWithFormat:@"加油，还差%i个字",self.minInputCount-text.length];
+        _textViewRemainCharCountLabel.text = [NSString stringWithFormat:@"加油，还差%lu个字",self.minInputCount-text.length];
     } else if (text.length <= self.maxInputCount) {
         if (self.minInputCount == 0) {
             // 没有最少输入
             _textViewRemainCharCountLabel.textColor = self.charCountLabelNormalTextColor;
-            _textViewRemainCharCountLabel.text = [NSString stringWithFormat:@"还可以输入%i个字",self.maxInputCount-text.length];
+            _textViewRemainCharCountLabel.text = [NSString stringWithFormat:@"还可以输入%lu个字",self.maxInputCount-text.length];
         } else {
             _textViewRemainCharCountLabel.textColor = self.charCountLabelNormalTextColor;
-            _textViewRemainCharCountLabel.text = [NSString stringWithFormat:@"真棒，还可以输入%i个字",self.maxInputCount-text.length];
+            _textViewRemainCharCountLabel.text = [NSString stringWithFormat:@"真棒，还可以输入%lu个字",self.maxInputCount-text.length];
         }
     } else {
         _textViewRemainCharCountLabel.textColor = self.charCountLabelMoreThanMaxTextColor;
-        _textViewRemainCharCountLabel.text = [NSString stringWithFormat:@"最多可以输入%i个字",self.maxInputCount];
+        _textViewRemainCharCountLabel.text = [NSString stringWithFormat:@"最多可以输入%li个字",(long)self.maxInputCount];
     }
 }
 
@@ -130,7 +130,7 @@
     if (textView.text.length > self.maxInputCount && rangeStr.length == 0) {
         // 延迟到下一个runloop，否则会崩溃
         [self performSelector:@selector(delayCutText) withObject:nil afterDelay:0];
-        _textViewRemainCharCountLabel.text = [NSString stringWithFormat:@"已经输入%i个字",self.maxInputCount];
+        _textViewRemainCharCountLabel.text = [NSString stringWithFormat:@"已经输入%li个字",(long)self.maxInputCount];
     }else
     {
 //        if (textView.text.length ==0) {
