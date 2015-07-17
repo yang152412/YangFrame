@@ -14,6 +14,34 @@
     return [self adjustContentSizeToSize:self.frame.size];
 }
 
+- (CGSize)adjustContentSizeToMaxWidth
+{
+    return [self adjustContentSizeToWidth:CGFLOAT_MAX];
+}
+
+- (CGSize)adjustContentSizeToWidth:(CGFloat)width
+{
+    CGSize size = [self adjustContentSizeToSize:CGSizeMake(width, self.bounds.size.height)];
+    CGRect frame = self.frame;
+    frame.size = size;
+    self.frame = frame;
+    return size;
+}
+
+- (CGSize)adjustContentSizeToMaxHeight
+{
+    return [self adjustContentSizeToHeight:CGFLOAT_MAX];
+}
+
+- (CGSize)adjustContentSizeToHeight:(CGFloat)height
+{
+    CGSize size = [self adjustContentSizeToSize:CGSizeMake(self.bounds.size.width, height)];
+    CGRect frame = self.frame;
+    frame.size = size;
+    self.frame = frame;
+    return size;
+}
+
 - (CGSize)adjustContentSizeToSize:(CGSize)size
 {
     if ([[UIDevice currentDevice].systemVersion doubleValue] < 7.0f) {

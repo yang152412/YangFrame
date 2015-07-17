@@ -10,7 +10,12 @@
 
 @interface UILabel(ContentSize)
 
-- (CGSize)contentSize;
+- (CGSize)contentSize;// 用处不大
 - (CGSize)adjustContentSizeToSize:(CGSize)size;
+
+- (CGSize)adjustContentSizeToMaxWidth;
+- (CGSize)adjustContentSizeToWidth:(CGFloat)width;
+- (CGSize)adjustContentSizeToMaxHeight;
+- (CGSize)adjustContentSizeToHeight:(CGFloat)height;
 
 @end
